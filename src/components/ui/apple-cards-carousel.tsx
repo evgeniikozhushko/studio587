@@ -219,15 +219,19 @@ export const Card = ({
               >
                 <IconX className="h-6 w-6 text-neutral-100 dark:text-neutral-900" />
               </button>
+              
+              {/* Modal card category */}
               <motion.p
                 layoutId={layout ? `category-${card.title}` : undefined}
-                className="text-base font-medium text-black dark:text-white"
+                className="text-sm font-medium uppercase text-black dark:text-white"
               >
                 {card.category}
               </motion.p>
+
+              {/* Modal card title  */}
               <motion.p
                 layoutId={layout ? `title-${card.title}` : undefined}
-                className="mt-4 text-2xl font-semibold text-neutral-700 md:text-5xl dark:text-white"
+                className="mt-4 text-lg md:text-2xl font-semibold text-neutral-700 dark:text-white"
               >
                 {card.title}
               </motion.p>

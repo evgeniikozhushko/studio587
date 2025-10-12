@@ -57,7 +57,7 @@ export function NavMenu() {
     <NavigationMenu viewport={false} className="my-2 mx-2">
       <NavigationMenuList className="gap-14">
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="font-light uppercase">Home</NavigationMenuTrigger>
+          <NavigationMenuTrigger className="font-bold uppercase">Studio 587</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
               <li className="row-span-3">
@@ -104,7 +104,7 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} uppercase`}>
+          <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} font-light uppercase`}>
             <Link href="/docs">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
