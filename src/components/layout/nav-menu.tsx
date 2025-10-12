@@ -54,8 +54,8 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function NavMenu() {
   return (
-    <NavigationMenu viewport={false}>
-      <NavigationMenuList>
+    <NavigationMenu viewport={false} className="my-2 mx-2">
+      <NavigationMenuList className="gap-14">
         <NavigationMenuItem>
           <NavigationMenuTrigger className="font-light uppercase">Home</NavigationMenuTrigger>
           <NavigationMenuContent>

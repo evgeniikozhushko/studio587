@@ -91,21 +91,37 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       value={{ onCardClose: handleCardClose, currentIndex }}
     >
       <div className="relative w-full">
+        <div className=" flex justify-end gap-2">
+          <button
+            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-sm bg-gray-100 disabled:opacity-50"
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+          >
+            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
+          </button>
+          <button
+            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-sm bg-gray-100 disabled:opacity-50"
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+          >
+            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
+          </button>
+        </div>
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-10"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
           <div
             className={cn(
-              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l",
+              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
             )}
           ></div>
 
           <div
             className={cn(
               "flex flex-row justify-start gap-2 pl-0",
-              "mx-auto ", // Add max-w-4xl if you want the carousel to span NOT the full width of its container
+              "mx-auto " // Add max-w-4xl if you want the carousel to span NOT the full width of its container
             )}
           >
             {items.map((item, index) => (
@@ -131,22 +147,6 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
               </motion.div>
             ))}
           </div>
-        </div>
-        <div className="mr-10 flex justify-end gap-2">
-          <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-sm bg-gray-100 disabled:opacity-50"
-            onClick={scrollLeft}
-            disabled={!canScrollLeft}
-          >
-            <IconArrowNarrowLeft className="h-6 w-6 text-gray-500" />
-          </button>
-          <button
-            className="relative z-40 flex h-10 w-10 items-center justify-center rounded-sm bg-gray-100 disabled:opacity-50"
-            onClick={scrollRight}
-            disabled={!canScrollRight}
-          >
-            <IconArrowNarrowRight className="h-6 w-6 text-gray-500" />
-          </button>
         </div>
       </div>
     </CarouselContext.Provider>
@@ -245,13 +245,13 @@ export const Card = ({
         <div className="relative z-40 p-8">
           <motion.p
             layoutId={layout ? `category-${card.category}` : undefined}
-            className="text-left font-sans text-sm font-medium text-white md:text-base"
+            className="text-left font-sans text-xs text-white md:text-base uppercase"
           >
             {card.category}
           </motion.p>
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="mt-2 max-w-xs text-left font-sans text-xl font-semibold [text-wrap:balance] text-white md:text-3xl"
+            className="mt-2 max-w-xs text-left font-sans text-xl [text-wrap:balance] text-white md:text-3xl"
           >
             {card.title}
           </motion.p>
@@ -281,7 +281,7 @@ export const BlurImage = ({
       className={cn(
         "h-full w-full transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
-        className,
+        className
       )}
       onLoad={() => setLoading(false)}
       src={src as string}

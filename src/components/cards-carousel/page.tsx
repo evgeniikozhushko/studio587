@@ -10,13 +10,13 @@ export function CardsCarousel() {
 
   return (
     <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
-      <div className="col-span-1 md:col-span-12 w-full h-full py-5">
+      <div className="col-span-1 md:col-span-12 w-full h-full">
         <div className="col-span-1 md:col-span-12 space-y-4">
-          <div className="text-sm uppercase col-span-1 md:col-span-12 space-y-4">
+          <div className="text-sm uppercase col-span-1 md:col-span-12 space-y-4 mb-3">
             Featured work
           </div>
         </div>
-        <div className="col-span-1 md:col-span-12 max-w-7xl text-xl md:text-4xl font-semibold text-neutral-800 dark:text-neutral-200 font-sans">
+        <div className="col-span-1 md:col-span-12 max-w-7xl text-xl md:text-3xl font-semibold text-neutral-800 dark:text-neutral-200 font-sans">
           Latest projects
         </div>
         <Carousel items={cards} />
@@ -59,8 +59,8 @@ const DummyContent = () => {
 
 const data = [
   {
-    category: "Artificial Intelligence",
-    title: "You can do more with AI.",
+    category: "Web dev",
+    title: "Bow Valley Climbing Access Society [BVCAS]",
     src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     content: <DummyContent />,
   },
