@@ -16,9 +16,9 @@ export function CardsCarousel() {
             Featured work
           </div>
         </div>
-        <h2 className="col-span-1 md:col-span-12 max-w-7xl mx-auto text-xl md:text-4xl font-semibold text-neutral-800 dark:text-neutral-200 font-sans">
+        <div className="col-span-1 md:col-span-12 max-w-7xl text-xl md:text-4xl font-semibold text-neutral-800 dark:text-neutral-200 font-sans">
           Latest projects
-        </h2>
+        </div>
         <Carousel items={cards} />
       </div>
     </section>
@@ -32,7 +32,7 @@ const DummyContent = () => {
         return (
           <div
             key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-sm mb-4"
           >
             <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
               <span className="font-bold text-neutral-700 dark:text-neutral-200">
