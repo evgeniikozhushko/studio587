@@ -246,7 +246,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className="relative z-10 flex h-80 w-80 flex-col items-start justify-start overflow-hidden rounded-sm bg-gray-100 md:h-[60rem] md:w-[50rem] dark:bg-neutral-900"
+        className="group relative z-10 flex h-80 w-80 flex-col items-start justify-start overflow-hidden rounded-sm bg-gray-100 md:h-[44rem] md:w-[34rem] dark:bg-neutral-900"
       >
         <div className="pointer-events-none absolute inset-x-0 top-0 z-30 h-full bg-gradient-to-b from-black/50 via-transparent to-transparent" />
         <div className="relative z-40 p-8">
@@ -271,7 +271,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="absolute inset-0 z-10 object-cover"
+          className="absolute inset-0 z-10 object-cover transition-all duration-600 group-hover:blur-sm"
         />
       </motion.button>
     </>
@@ -288,19 +288,16 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <img
+    <Image
       className={cn(
-        "h-full w-full transition duration-300",
-        isLoading ? "blur-sm" : "blur-0",
+        "transition duration-3000",
+        isLoading ? "blur-sm scale-110" : "blur-0 scale-100",
         className
       )}
       onLoad={() => setLoading(false)}
-      src={src as string}
+      src={src}
       width={width}
       height={height}
-      loading="lazy"
-      decoding="async"
-      blurDataURL={typeof src === "string" ? src : undefined}
       alt={alt ? alt : "Background of a beautiful view"}
       {...rest}
     />
