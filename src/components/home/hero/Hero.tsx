@@ -11,7 +11,7 @@ export default function Hero() {
               Creative Design & Web Development for Culture, Technology, and
               Commerce.
             </div>
-            <div className="text-4xl font-semibold col-span-1 md:col-span-12">
+            <div className="text-4xl md:text-5xl font-semibold col-span-1 md:col-span-12">
               Building the next generation of brands, experiences && growth.
             </div>
           </div>
