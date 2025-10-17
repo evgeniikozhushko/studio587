@@ -7,6 +7,7 @@ import type { Project } from "@/types/project";
 export default function ProjectCardContent({ project }: { project: Project }) {
   return (
     <div className="space-y-6">
+      
       {/* Summary section */}
       {project.summary && (
         <div className="text-lg text-neutral-700 dark:text-neutral-300">

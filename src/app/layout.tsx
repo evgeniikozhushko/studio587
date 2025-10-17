@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "587 Labs",
-  description: "Brand, web and marketing.",
+  title: "Studio 587",
+  description: "Brand, web development and marketing.",
 };
 
 export default function RootLayout({

@@ -3,34 +3,34 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     slug: "bvcas",
-    category: "Web dev",
+    category: "Brand & web development",
     title: "Bow Valley Climbing Access Society (BVCAS)",
     summary:
       "Brand-aligned site and CMS to improve outreach, updates, and volunteer engagement.",
     cover: {
-      src: "/projects/bvcas/cover.jpg",
+      src: "/projects/bvcas/bvcas.jpg",
       alt: "BVCAS homepage hero section",
     },
     details: `I partnered with the Bow Valley Climbing Access Society to develop a clear brand presence and a site that supports their advocacy for responsible climbing access in the Bow Valley. Built on Webflow with a structured CMS for news, events, and partners. The result: easier updates, better mobile performance, and stronger community engagement.`,
     tags: ["Webflow", "CMS", "Non-profit", "SEO"],
     gallery: [
-      { src: "/projects/bvcas/home.jpg", alt: "BVCAS homepage" },
-      { src: "/projects/bvcas/cms.jpg", alt: "Webflow CMS collections" },
+      { src: "/projects/bvcas/bvcas.jpg", alt: "BVCAS homepage" },
+      { src: "/projects/bvcas/bvcas.jpg", alt: "Webflow CMS collections" },
     ],
-    cta: { label: "View live site", href: "https://bvcas.ca" },
+    cta: { label: "View site", href: "https://bvcas.ca" },
   },
 
   {
     slug: "cics",
-    category: "Web dev",
+    category: "Brand & web development",
     title: "Canmore Indoor Climbing Society (CICS)",
     summary:
-      "Website + lightweight brand system supporting youth programs (ages 9–18).",
+      "Website and brand system supporting youth programs.",
     cover: {
       src: "/projects/cics/cover.jpg",
       alt: "CICS site hero with program CTAs",
     },
-    details: `Designed a streamlined site focused on what parents need first: programs, schedules, registration, and contact. Implemented clear IA, strong mobile layout, and basic analytics to track interest. The update improved program visibility and community engagement.`,
+    details: `Designed a streamlined site focused on what parents need first: programs, schedules, registration, and contact. Implemented strong mobile layout, and basic analytics to track interest. The update improved program visibility and community engagement.`,
     tags: ["Brand", "Web", "Accessibility", "Analytics"],
     gallery: [
       { src: "/projects/cics/hero.jpg", alt: "CICS homepage hero" },
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     category: "Web dev",
     title: "Summit Custom Conversions",
     summary:
-      "Visual website and brand assets that showcase craftsmanship and increase inquiries.",
+      "Website and brand development that showcase craftsmanship and increase sales.",
     cover: {
       src: "/projects/summit/cover.jpg",
       alt: "Custom van exterior with mountain backdrop",
