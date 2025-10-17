@@ -1,11 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { Separator } from "@/components/ui/separator";
+import processData from "@/data/process";
 
 export default function Hero() {
   return (
     <>
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-40 gap-y-4">
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-50 gap-y-4">
         <div className="col-span-1 md:col-span-6 md:col-start-4 space-y-4 text-center">
           <div className="text-sm uppercase col-span-1">How we work</div>
           <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12">
@@ -15,6 +17,27 @@ export default function Hero() {
             engines for change—builders of futures and shapers of communities.
           </div>
         </div>
+      </section>
+
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-40 gap-y-4">
+        {processData.map((item: any, index: any) => (
+          <div
+            key={index}
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-14"
+          >
+            <Separator className="mb-14" />
+            <div className="flex gap-20">
+              <div className="text-sm md:text-sm flex-shrink-0">
+                {item.order}
+              </div>
+              <div className="space-y-2 text-start">
+                <div className="text-sm uppercase">{item.type}</div>
+                <div className="text-lg md:text-3xl font-semibold">{item.title}</div>
+                <div className="text-sm md:text-sm">{item.description}</div>
+              </div>
+            </div>
+          </div>
+        ))}
       </section>
     </>
   );
