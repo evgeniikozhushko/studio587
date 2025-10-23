@@ -6,7 +6,7 @@ export default function Hero() {
 
   const handleEmailClick = () => {
     const email = 'hello@studio587.ca';
-    const subject = 'Inquiry from Studio587.ca website';
+    const subject = 'Studio587.ca';
 
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`
   }
