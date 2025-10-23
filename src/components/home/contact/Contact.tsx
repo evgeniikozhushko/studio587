@@ -5,14 +5,15 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Contact() {
-
   const handleEmailClick = () => {
-    const email = 'hello@studio587.ca';
-    const subject = 'Studio587.ca';
+    const email = "hello@studio587.ca";
+    const subject = "Studio587.ca";
 
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`
-  }
-  
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}`;
+  };
+
   return (
     <>
       <main className="my-0 space-y-24 md:my-50 md:space-y-48">
@@ -24,20 +25,18 @@ export default function Contact() {
             <div className="text-4xl md:text-5xl font-semibold col-span-1 md:col-span-12">
               587 reasons to work together
             </div>
-            <Button
-              className="mt-2 px-18"
-              onClick={handleEmailClick}
-            >
+            <Button className="mt-2 px-18" onClick={handleEmailClick}>
               Start a project
             </Button>
           </div>
           <div className="col-span-1 md:col-span-2 md:col-start-9 md:row-start-1 flex flex-col gap-1">
             <div className="uppercase text-xs md:text-sm">Contact</div>
-            <div className="text-md font-semibold md:text-lg">hello@studio587.ca</div>
+            <div className="text-md font-semibold md:text-lg">
+              <a href="mailto:hello@studio587.ca">hello@studio587.ca</a>
+            </div>
           </div>
         </section>
       </main>
     </>
   );
 }
-  
