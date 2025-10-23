@@ -8,7 +8,7 @@ export default function Footer() {
       <Separator className="col-span-1 md:col-span-12 my-10" />
       <div className="container col-span-1 md:col-span-2">
         <div className="text-sm uppercase pb-4">
-          Studio 587 is a design and technology hub that builds brands and
+          Studio 587 spacialize in design and technology that builds brands and
           websites.
         </div>
         <p className="text-start text-xs">

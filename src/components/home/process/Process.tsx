@@ -12,20 +12,20 @@ export default function Hero() {
           <div className="text-sm uppercase col-span-1">How we work</div>
           <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12">
             We work collaboratively with our clients to create brands,
-            webspaces, and campaigns that shape how people connect and grow. Our
+            websites, and campaigns that shape how people connect and grow. Our
             partners are forward thinkers who see design and technology as
             engines for change—builders of futures and shapers of communities.
           </div>
         </div>
       </section>
 
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-40 gap-y-4">
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-30 gap-y-4">
         {processData.map((item: any, index: any) => (
           <div
             key={index}
-            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-14"
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
           >
-            <Separator className="mb-14" />
+            <Separator className="mb-12"/>
             <div className="flex gap-20">
               <div className="text-sm md:text-sm flex-shrink-0">
                 {item.order}
@@ -38,6 +38,7 @@ export default function Hero() {
             </div>
           </div>
         ))}
+        <Separator className="col-span-1 md:col-span-12 my-12" />
       </section>
     </>
   );
