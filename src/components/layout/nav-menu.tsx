@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
@@ -18,6 +19,7 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
+  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -62,9 +64,10 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function NavMenu() {
+  const [open, setOpen] = useState(false);
   return (
     <>
-    {/* Desktop Navigation (≥768px) */}
+      {/* Desktop Navigation (≥768px) */}
       <NavigationMenu viewport={false} className="hidden md:flex my-2 mx-2">
         <NavigationMenuList className="gap-4 md:gap-14">
           <NavigationMenuItem>
@@ -213,18 +216,55 @@ export function NavMenu() {
         </NavigationMenuList>
       </NavigationMenu>
 
-      <Sheet>
-        <SheetTrigger className="">Menu</SheetTrigger>
-        <SheetContent className="w-[360px]">
-          <SheetHeader>
-            <SheetTitle>Are you absolutely sure?</SheetTitle>
-            <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </SheetDescription>
-          </SheetHeader>
-        </SheetContent>
-      </Sheet>
+      <div className="grid grid-cols-12 px-5 pt-4 md:hidden">
+        <div className="col-span-6">
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            className="md:hidden text-sm uppercase font-bold"
+          >
+            Studio 587
+          </Link>
+        </div>
+        <div className="col-start-12 flex justify-end">
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger className="md:hidden text-sm uppercase">
+              Menu
+            </SheetTrigger>
+            <SheetContent className="w-full">
+              <SheetHeader className="items-center m-auto gap-6">
+                <SheetTitle className="mb-8">Menu</SheetTitle>
+                <Link
+                  className="uppercase"
+                  href="/work"
+                  onClick={() => setOpen(false)}
+                >
+                  Work
+                </Link>
+                <Link
+                  className="uppercase"
+                  href="/studio"
+                  onClick={() => setOpen(false)}
+                >
+                  Studio
+                </Link>
+                <Link
+                  className="uppercase"
+                  href="/process"
+                  onClick={() => setOpen(false)}
+                >
+                  Process
+                </Link>
+              </SheetHeader>
+              <SheetFooter className="flex items-center">
+                <SheetDescription className="mb-10 text-4xl font-bold uppercase text-center">
+                  587 reasons to work together
+                </SheetDescription>
+              </SheetFooter>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
     </>
   );
 }
