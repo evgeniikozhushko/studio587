@@ -9,21 +9,20 @@ export default function Footer() {
 
       <div className="col-span-1 md:col-span-12">
         <div className="text-sm uppercase pb-4 text-center">
-        Bridging strategic creativity and advanced technology to build brands and digital
-        platforms that connect audiences and drive growth.
+          Bridging strategic creativity and advanced technology to build brands
+          and digital platforms that connect audiences and drive growth.
         </div>
       </div>
 
       <div className="col-span-1 md:col-span-12">
         {/* <Separator className="m-10" /> */}
         <div className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] leading-none font-bold uppercase col-span-1 md:col-span-12 text-center">
-  Studio 587
-</div>
+          Studio 587
+        </div>
         <div className="text-center text-xs m-10">
           &copy; {new Date().getFullYear()} Studio 587. All rights reserved.
         </div>
       </div>
-
     </footer>
   );
 }
