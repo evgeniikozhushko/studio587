@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer"
 import Hero from "@/components/home/hero/Hero"
 import { CardsCarousel } from "@/components/home/cards-carousel/CardsCarousel"
 import Process from '@/components/home/process/Process'
+import Contact from '@/components/home/contact/Contact'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
      <Hero />
      <CardsCarousel />
      <Process />
+     <Contact />
      <Footer />
     </>
   );
