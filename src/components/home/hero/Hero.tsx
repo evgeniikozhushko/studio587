@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
 
   const handleEmailClick = () => {
-    const email = 'mailto:hello@studio587.ca';
+    const email = 'hello@studio587.ca';
     const subject = 'Inquiry from Studio587.ca website';
 
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`
