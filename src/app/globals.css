@@ -6,6 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-backgroundTertiary: var(--backgroundTertiary);
+  --color-foregroundTertiary: var(--foregroundTertiary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -46,8 +48,9 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --backgroundSecondary: rgb(94,72,180);
+  --backgroundTertiary: oklch(0.4843 0.1638 288.07);
   --foreground: oklch(0.145 0 0);
+  --foregroundTertiary: oklch(1 0 360);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -80,7 +83,7 @@
 
   /* New settings */
   --mw-800: 43.75rem;
-  --mw-700:34.375rem;
+  --mw-700: 34.375rem;
 }
 
 .dark {
@@ -126,6 +129,7 @@
   }
 }
 
-.backgroundSecondary {
-  background-color: var(--backgroundSecondary);
+body {
+  margin: 0 !important;
+  padding: 0 !important;
 }

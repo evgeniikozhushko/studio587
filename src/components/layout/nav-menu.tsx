@@ -3,6 +3,7 @@
 import * as React from "react";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 // import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
 import {
@@ -65,13 +66,19 @@ import {
 
 export function NavMenu() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
   return (
     <>
       {/* Desktop Navigation (≥768px) */}
       <NavigationMenu viewport={false} className="hidden md:flex my-2 mx-2">
         <NavigationMenuList className="gap-4 md:gap-14">
           <NavigationMenuItem>
-            <NavigationMenuTrigger className="font-semibold uppercase">
+            <NavigationMenuTrigger
+              className={`font-semibold uppercase ${
+                pathname === "/process" ? "bg-backgroundTertiary" : ""
+              }`}
+            >
               Studio 587
             </NavigationMenuTrigger>
 
