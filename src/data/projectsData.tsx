@@ -24,8 +24,7 @@ export const projects: Project[] = [
     slug: "cics",
     category: "Brand & web development",
     title: "Canmore Indoor Climbing Society (CICS)",
-    summary:
-      "Website and brand system supporting youth programs.",
+    summary: "Website and brand system supporting youth programs.",
     cover: {
       src: "/projects/cics/cover.jpg",
       alt: "CICS site hero with program CTAs",

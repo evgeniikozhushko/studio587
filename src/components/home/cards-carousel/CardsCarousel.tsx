@@ -2,7 +2,7 @@
 
 import React from "react"
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel"
-import { projects } from "@/data/projects"
+import { projects } from "@/data/projectsData"
 import ProjectCardContent from "../../projects/ProjectCardContent"
 
 export function CardsCarousel() {

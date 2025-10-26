@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
-import processData from "@/data/process";
+import processData from "@/data/processData";
 
-export default function Hero() {
+export default function Process() {
   return (
     <>
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-50 gap-y-4">

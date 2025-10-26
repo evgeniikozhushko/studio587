@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 export default function Hero() {
 
@@ -30,7 +31,7 @@ export default function Hero() {
           </div> */}
 
           <div className="col-span-1 md:col-span-2 md:col-start-9 md:row-start-1 flex flex-col gap-2 items-start">
-            <div className="uppercase text-xs md:text-sm">
+            <div className="hidden md:block uppercase text-xs md:text-sm">
               Servicing Canmore, Banff, Bow Valley, Alberta, and clients globally.
             </div>
             <Button
@@ -39,6 +40,12 @@ export default function Hero() {
             >
               Start a project
             </Button>
+
+            <div className="md:hidden uppercase text-xs md:text-sm mt-16">
+              Servicing Canmore, Banff, Bow Valley, Alberta, and clients globally.
+            </div>
+
+            <Separator className="col-span-1 mt-0 mt-14 md:hidden" />
           </div>
         </section>
       </main>
