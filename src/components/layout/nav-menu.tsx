@@ -71,7 +71,7 @@ export function NavMenu() {
   return (
     <>
       {/* Desktop Navigation (≥768px) */}
-      <div className="hidden md:block sticky top-0 z-50">
+      <div className="hidden md:block sticky top-0 z-50 py-2">
       <NavigationMenu viewport={false} className="my-2 mx-2">
         <NavigationMenuList className="gap-4 md:gap-14">
           <NavigationMenuItem>
@@ -95,7 +95,7 @@ export function NavMenu() {
                         Studio 587
                       </div>
                       <p className="text-muted-foreground text-sm leading-tight">
-                        Beautifully designed websites for your business.
+                        Bring it home
                       </p>
                     </a>
                   </NavigationMenuLink>

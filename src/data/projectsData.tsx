@@ -26,7 +26,7 @@ export const projects: Project[] = [
     title: "Canmore Indoor Climbing Society (CICS)",
     summary: "Website and brand system supporting youth programs.",
     cover: {
-      src: "/projects/cics/cover.jpg",
+      src: "/projects/cics/cics.jpg",
       alt: "CICS site hero with program CTAs",
     },
     details: `Designed a streamlined site focused on what parents need first: programs, schedules, registration, and contact. Implemented strong mobile layout, and basic analytics to track interest. The update improved program visibility and community engagement.`,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     summary:
       "Website and brand development that showcase craftsmanship and increase sales.",
     cover: {
-      src: "/projects/summit/cover.jpg",
+      src: "/projects/summitCustomConversions/scc.jpg",
       alt: "Custom van exterior with mountain backdrop",
     },
     details: `Built a visually rich site to highlight interior finishes and build quality. Created a custom photo gallery and refined brand elements to elevate trust and conversions. The project improved lead quality and helped drive vehicle sales.`,
@@ -64,7 +64,7 @@ export const projects: Project[] = [
     summary:
       "Local services website with clear CTAs, service pages, and mobile-first performance.",
     cover: {
-      src: "/projects/shovelsup/cover.jpg",
+      src: "/projects/shovelsUp/shovelsUp.jpg",
       alt: "Shovels Up homepage with service highlights",
     },
     details: `Delivered a clean, responsive site for a Bow Valley services company (snow removal, landscaping, decks, line painting). Focused on straightforward navigation, persuasive service pages, and prominent calls-to-action. Implemented lightweight tracking and ongoing support.`,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     summary:
       "Logo and identity for a local paddleboard brand — clean, versatile, and outdoor-ready.",
     cover: {
-      src: "/projects/clearwater/cover.jpg",
+      src: "/projects/clearwaterPaddleboard/clearwaterPaddleboard.jpg",
       alt: "Clearwater Paddleboards logo lockup",
     },
     details: `Created a logo system and basic brand assets suitable for both digital and print applications. Emphasis on legibility, water-inspired forms, and easy application across boards, apparel, and packaging.`,
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     summary:
       "Design-first Next.js site showcasing selected work, writing, and experiments.",
     cover: {
-      src: "/projects/evgenii/cover.jpg",
+      src: "/projects/evgenii/evgenii.jpg",
       alt: "Portfolio UI preview",
     },
     details: `Built with Next.js and Tailwind, focusing on fast LCP, clean typography, and component reuse. The site doubles as a sandbox for UI libraries and interaction patterns, with a simple content model for adding new case studies over time.`,

@@ -24,7 +24,6 @@ export default function Footer({separatorVariant = "default"}: FooterProps) {
       <div className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[14rem] xl:text-[18rem] leading-none font-bold uppercase col-span-1 md:col-span-12 text-center">
         Studio 587
       </div>
-
       <div className="md:hidden text-xs md:col-span-2 text-center md:text-start m-1">
         &copy; {new Date().getFullYear()} Studio 587. All rights reserved.
       </div>
