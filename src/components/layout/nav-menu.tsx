@@ -71,7 +71,8 @@ export function NavMenu() {
   return (
     <>
       {/* Desktop Navigation (≥768px) */}
-      <NavigationMenu viewport={false} className="hidden md:flex my-2 mx-2">
+      <div className="hidden md:block sticky top-0 z-50">
+      <NavigationMenu viewport={false} className="my-2 mx-2">
         <NavigationMenuList className="gap-4 md:gap-14">
           <NavigationMenuItem>
             <NavigationMenuTrigger
@@ -198,6 +199,8 @@ export function NavMenu() {
           </NavigationMenuItem> */}
         </NavigationMenuList>
       </NavigationMenu>
+      </div>
+
 
       <div className="grid grid-cols-12 px-5 pt-4 md:hidden">
         <div className="col-span-6">

@@ -2,16 +2,22 @@ import React from "react";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 
-export default function Footer() {
+type SeparatorVariant = "default" | "primary" | "secondary" | "accent" | "success" | "warning" | "error";
+
+interface FooterProps {
+  separatorVariant?: SeparatorVariant;
+}
+
+export default function Footer({separatorVariant = "default"}: FooterProps) {
   return (
     <footer className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4 mb-10">
-      <Separator className="col-span-1 md:col-span-12 mt-0 mb-10 md:my-20" />
+      <Separator className="col-span-1 md:col-span-12 mt-0 mb-10 md:my-20" variant={separatorVariant}/>
 
       <div className="col-span-1 text-xs md:col-span-4 mb-0 uppercase text-center md:text-start">
         We are bridging strategic creativity and advanced technology to build brands
         and digital platforms that connect audiences and drive growth.
       </div>
-      <div className="hidden md:block text-xs md:col-span-2 md:col-start-11 text-center md:text-start">
+      <div className="hidden md:block text-xs md:col-span-2 md:col-start-11 text-center md:text-end">
         &copy; {new Date().getFullYear()} Studio 587. All rights reserved.
       </div>
 

@@ -10,7 +10,6 @@ export default function ProcessPage() {
   return (
     <div className="bg-backgroundTertiary text-foregroundTertiary fixed inset-0 overflow-auto">
       <NavMenu />
-      <>
         <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-50 gap-y-4">
           <div className="text-sm uppercase col-span-1">How we work</div>
           <div className="col-span-1 md:col-span-4 md:col-start-3 space-y-4">
@@ -32,14 +31,14 @@ export default function ProcessPage() {
           </div>
         </section>
 
-        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-30 gap-y-4">
+        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-10 gap-y-4">
         <div className="text-sm uppercase col-span-1">The process</div>
           {processData.map((item: any, index: any) => (
             <div
               key={index}
               className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
             >
-              <Separator className="mb-12" />
+              <Separator className="mb-12" variant="primary"/>
               <div className="flex gap-20">
                 <div className="text-sm md:text-sm flex-shrink-0">
                   {item.order}
@@ -54,10 +53,9 @@ export default function ProcessPage() {
               </div>
             </div>
           ))}
-          <Separator className="col-span-1 md:col-span-12 my-10" />
+          <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/>
         </section>
-      </>
-      <Footer />
+      <Footer separatorVariant="primary"/>
     </div>
   );
 }
