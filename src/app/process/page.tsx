@@ -87,21 +87,32 @@ export default function ProcessPage() {
         {/* <div className="grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
           Timeline
         </div> */}
+        <div className="text-sm uppercase mb-4 md:col-span-8">{selectedTimeline.description}</div>
+        <div className="text-sm uppercase md:col-start-12 md:col-span-1 text-right self-end items-end">From</div>
+
         {/* Buttons to switch timelines */}
-        <div className="flex gap-4">
+        <div className="col-span-1 md:col-span-12 flex justify-between items-center">
+        <div className="flex gap-4 w-fit">
           {timelines.map((timeline) => (
-            <Button
-              key={timeline.id}
-              onClick={() => setSelectedTimeline(timeline)}
-              variant={"outlineTwo"}
-              className={
-                selectedTimeline.id !== timeline.id ? "opacity-50" : ""
-              }
-            >
-              {timeline.name}
-            </Button>
+              <Button
+                key={timeline.id}
+                onClick={() => setSelectedTimeline(timeline)}
+                variant={"outlineTwo"}
+                className={
+                  selectedTimeline.id !== timeline.id ? "opacity-50" : ""
+                }
+              >
+                {timeline.name}
+              </Button>
           ))}
         </div>
+
+          {/* Cost number*/}
+          <div className="col-span-1 md:col-span-12 md:col-start-8 md:col-span-1 flex gap-4 items-center">
+            <div className="text-4xl">{selectedTimeline.cost}</div>
+          </div>
+        </div>
+
         <Separator
           className="col-span-1 md:col-span-12 mt-4"
           variant="primary"
@@ -130,9 +141,42 @@ export default function ProcessPage() {
             </div>
           </React.Fragment>
         ))}
+        <Separator
+          className="col-span-1 md:col-span-12 mt-20"
+          variant="primary"
+        />
       </section>
 
-      {/* <section className="grid w-full grid-cols-1 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mt-40 gap-y-4">
+        <div className="text-sm uppercase col-span-1">The process</div>
+        {processData.map((item: any, index: any) => (
+          <div
+            key={index}
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
+          >
+            {index !== 0 && <Separator className="mb-12" variant="primary" />}
+            <div className="flex gap-20">
+              <div className="text-sm md:text-sm flex-shrink-0">
+                {item.order}
+              </div>
+              <div className="space-y-2 text-start">
+                <div className="text-sm uppercase">{item.type}</div>
+                <div className="text-lg md:text-3xl font-semibold">
+                  {item.title}
+                </div>
+                <div className="text-sm md:text-sm">{item.description}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/> */}
+      </section>
+      <Footer separatorVariant="primary" />
+    </div>
+  );
+}
+
+{/* <section className="grid w-full grid-cols-1 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
         <div className="text-xs grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
           Strategy
         </div>
@@ -162,7 +206,7 @@ export default function ProcessPage() {
         </div>
       </section> */}
 
-      {/* <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
+{/* <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
         <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/>
           <div className="col-span-1 md:col-span-6 space-y-4 mb-10">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
@@ -182,32 +226,3 @@ export default function ProcessPage() {
             </div>
           </div>
         </section> */}
-
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mt-50 gap-y-4">
-        <div className="text-sm uppercase col-span-1">The process</div>
-        {processData.map((item: any, index: any) => (
-          <div
-            key={index}
-            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
-          >
-            <Separator className="mb-12" variant="primary" />
-            <div className="flex gap-20">
-              <div className="text-sm md:text-sm flex-shrink-0">
-                {item.order}
-              </div>
-              <div className="space-y-2 text-start">
-                <div className="text-sm uppercase">{item.type}</div>
-                <div className="text-lg md:text-3xl font-semibold">
-                  {item.title}
-                </div>
-                <div className="text-sm md:text-sm">{item.description}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-        {/* <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/> */}
-      </section>
-      <Footer separatorVariant="primary" />
-    </div>
-  );
-}

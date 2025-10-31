@@ -9,6 +9,8 @@ export interface TimelineItem {
 export interface TimelineConfig {
   id: string;
   name: string;
+  description: string;
+  cost: string;
   items: TimelineItem[];
 }
 
@@ -16,6 +18,8 @@ export const timelines: TimelineConfig[] = [
   {
     id: "Single",
     name: "Single Page",
+    description: "A landing-page-focused website built for smaller-scale projects, designed to launch quickly and communicate important information.",
+    cost: "1k",
     items: [
       {
         phase: "Strategy",
@@ -43,6 +47,8 @@ export const timelines: TimelineConfig[] = [
   {
     id: "MultiPage",
     name: "Multi-Page",
+    description: "A service-focused website built for information, designed to elevate your brand and engage your audience.",
+    cost: "3k",
     items: [
       {
         phase: "Strategy",
@@ -70,6 +76,8 @@ export const timelines: TimelineConfig[] = [
   {
     id: "Ecommerce",
     name: "E-commerce",
+    description: "A sales-focused website built for online commerce, designed to drive revenue and support business growth.",
+    cost: "5k",
     items: [
       {
         phase: "Strategy",
