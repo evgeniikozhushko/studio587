@@ -16,7 +16,7 @@ export default function Contact() {
 
   return (
     <>
-      <main className="my-0 space-y-24 my-20 md:my-40">
+      <main className="my-0 space-y-24 my-20 md:my-20">
         <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
           <div className="col-span-1 md:col-span-6 space-y-4 mb-10">
             <div className="text-sm uppercase col-span-1 md:col-span-12">

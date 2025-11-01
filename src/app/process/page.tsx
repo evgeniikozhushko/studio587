@@ -161,7 +161,7 @@ export default function ProcessPage() {
         />
       </section>
 
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mt-40 gap-y-4">
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mt-20 gap-y-4">
         <div className="text-sm uppercase col-span-1">The process</div>
         {processData.map((item: any, index: any) => (
           <div
