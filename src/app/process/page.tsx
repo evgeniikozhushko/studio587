@@ -17,46 +17,46 @@ export default function ProcessPage() {
 
   // Class mappings for dynamic Tailwind classes
   const colStartClasses: { [key: number]: string } = {
-    1: "md:col-start-1",
-    2: "md:col-start-2",
-    3: "md:col-start-3",
-    4: "md:col-start-4",
-    5: "md:col-start-5",
-    6: "md:col-start-6",
-    7: "md:col-start-7",
-    8: "md:col-start-8",
-    9: "md:col-start-9",
-    10: "md:col-start-10",
-    11: "md:col-start-11",
-    12: "md:col-start-12",
+    1: "col-start-5 md:col-start-1",
+    2: "col-start-5 md:col-start-2",
+    3: "col-start-5 md:col-start-3",
+    4: "col-start-5 md:col-start-4",
+    5: "col-start-5 md:col-start-5",
+    6: "col-start-5 md:col-start-6",
+    7: "col-start-5 md:col-start-7",
+    8: "col-start-5 md:col-start-8",
+    9: "col-start-5 md:col-start-9",
+    10: "col-start-5 md:col-start-10",
+    11: "col-start-5 md:col-start-11",
+    12: "col-start-5 md:col-start-12",
   };
 
   const colSpanClasses: { [key: number]: string } = {
-    1: "md:col-span-1",
-    2: "md:col-span-2",
-    3: "md:col-span-3",
-    4: "md:col-span-4",
-    5: "md:col-span-5",
-    6: "md:col-span-6",
-    7: "md:col-span-7",
-    8: "md:col-span-8",
-    9: "md:col-span-9",
-    10: "md:col-span-10",
-    11: "md:col-span-11",
-    12: "md:col-span-12",
+    1: "col-span-1 md:col-span-1",
+    2: "col-span-2 md:col-span-2",
+    3: "col-span-2 md:col-span-3",
+    4: "col-span-4 md:col-span-4",
+    5: "col-span-3 md:col-span-5",
+    6: "col-span-6 md:col-span-6",
+    7: "col-span-4 md:col-span-7",
+    8: "col-span-4 md:col-span-8",
+    9: "col-span-5 md:col-span-9",
+    10: "col-span-5 md:col-span-10",
+    11: "col-span-6 md:col-span-11",
+    12: "col-span-6 md:col-span-12",
   };
 
   const rowStartClasses: { [key: number]: string } = {
-    1: "md:row-start-1",
-    2: "md:row-start-2",
-    3: "md:row-start-3",
-    4: "md:row-start-4",
-    5: "md:row-start-5",
-    6: "md:row-start-6",
-    7: "md:row-start-7",
-    8: "md:row-start-8",
-    9: "md:row-start-9",
-    10: "md:row-start-10",
+    1: "row-start-1 md:row-start-1",
+    2: "row-start-2 md:row-start-2",
+    3: "row-start-3 md:row-start-3",
+    4: "row-start-4 md:row-start-4",
+    5: "row-start-5 md:row-start-5",
+    6: "row-start-6 md:row-start-6",
+    7: "row-start-7 md:row-start-7",
+    8: "row-start-8 md:row-start-8",
+    9: "row-start-9 md:row-start-9",
+    10: "row-start-10 md:row-start-10",
   };
 
   return (
@@ -110,7 +110,7 @@ export default function ProcessPage() {
                 {timeline.name}
               </Button>
             ))}
-            
+
           </div>
 
           {/* Cost number*/}
@@ -132,29 +132,31 @@ export default function ProcessPage() {
       </div>
 
       {/* Timeline component */}
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
+      <section className="grid w-full grid-cols-10 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
         {selectedTimeline.items.map((item, index) => (
           <React.Fragment key={index}>
             <div
-              className={`text-xs uppercase md:col-span-1 ${
+              className={`text-xs uppercase col-start-1 col-span-4 md:col-span-1 ${
                 rowStartClasses[item.rowStart]
               }`}
             >
               {item.phase}
+              <div className="block md:hidden text-[10px] mt-1">{item.duration}</div>
             </div>
             <div
-              className={`text-xs bg-background/4 ${
+              className={`text-[8px] md:text-xs bg-background/4 ${
                 colSpanClasses[item.colSpan]
               } ${rowStartClasses[item.rowStart]} ${
                 colStartClasses[item.colStart]
-              } border h-[80px] rounded-sm uppercase flex items-center justify-center`}
+              } border h-[60px] md:h-[80px] rounded-sm uppercase flex items-center justify-center`}
             >
-              {item.duration}
+              {/* {item.duration} */}
+              <span className="hidden md:block">{item.duration}</span>
             </div>
           </React.Fragment>
         ))}
         <Separator
-          className="col-span-1 md:col-span-12 mt-20"
+          className="col-span-10 md:col-span-12 my-8 md:mt-20"
           variant="primary"
         />
       </section>
