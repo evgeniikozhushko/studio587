@@ -83,17 +83,22 @@ export default function ProcessPage() {
         </div>
       </section>
 
-      <div className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-20">
+      <div className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-20">
         {/* <div className="grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
           Timeline
         </div> */}
-        <div className="text-sm uppercase mb-4 md:col-span-8">{selectedTimeline.description}</div>
-        <div className="text-sm uppercase md:col-start-12 md:col-span-1 text-right self-end items-end">From</div>
+        <div className="text-sm uppercase mb-10 md:mb-4 md:col-span-8">
+          {selectedTimeline.description}
+        </div>
+        <div className="text-sm uppercase md:col-start-12 md:col-span-1 text-right self-end items-end hidden md:block">
+          From
+        </div>
 
         {/* Buttons to switch timelines */}
         <div className="col-span-1 md:col-span-12 flex justify-between items-center">
-        <div className="flex gap-4 w-fit">
-          {timelines.map((timeline) => (
+          <div className="flex flex-col md:flex-row gap-4 w-fit">
+
+            {timelines.map((timeline) => (
               <Button
                 key={timeline.id}
                 onClick={() => setSelectedTimeline(timeline)}
@@ -104,17 +109,24 @@ export default function ProcessPage() {
               >
                 {timeline.name}
               </Button>
-          ))}
-        </div>
+            ))}
+            
+          </div>
 
           {/* Cost number*/}
-          <div className="col-span-1 md:col-span-12 md:col-start-8 md:col-span-1 flex gap-4 items-center">
+          <div className="col-span-1 md:col-span-12 md:col-start-8 md:col-span-1 flex flex-col gap-4 items-center">
+            <div className="text-sm uppercase block md:hidden">From</div>
             <div className="text-4xl">{selectedTimeline.cost}</div>
           </div>
         </div>
 
+        {/* <div className="col-span-1 md:col-span-12 md:col-start-8 md:col-span-1 flex gap-4 items-center">
+            <div className="text-sm uppercase">From</div>
+            <div className="text-4xl">{selectedTimeline.cost}</div>
+          </div> */}
+
         <Separator
-          className="col-span-1 md:col-span-12 mt-4"
+          className="col-span-1 md:col-span-12 mt-6 md:mt-4"
           variant="primary"
         />
       </div>
@@ -176,7 +188,8 @@ export default function ProcessPage() {
   );
 }
 
-{/* <section className="grid w-full grid-cols-1 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
+{
+  /* <section className="grid w-full grid-cols-1 md:grid-cols-12 md:grid-rows-2 px-5 gap-y-2 my-0">
         <div className="text-xs grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
           Strategy
         </div>
@@ -204,9 +217,11 @@ export default function ProcessPage() {
         <div className="text-xs grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 md:row-start-4 md:col-start-7 gap-y-2 border h-[100px] rounded-sm uppercase text-center items-center">
           1 week
         </div>
-      </section> */}
+      </section> */
+}
 
-{/* <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
+{
+  /* <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
         <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/>
           <div className="col-span-1 md:col-span-6 space-y-4 mb-10">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
@@ -225,4 +240,5 @@ export default function ProcessPage() {
               <a href="mailto:hello@studio587.ca">hello@studio587.ca</a>
             </div>
           </div>
-        </section> */}
+        </section> */
+}
