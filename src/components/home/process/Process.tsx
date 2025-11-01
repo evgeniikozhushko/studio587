@@ -20,7 +20,7 @@ export default function Process() {
       </section>
 
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-30 gap-y-4">
-      <Separator className="col-span-1 md:col-span-12 my-14"/>
+      <Separator className="col-span-1 md:col-span-12 my-14 w-full"/>
       {/* <div className="col-span-1 md:col-span-12 my-14 border-t border-gray-700 h-[0.25px]" /> */}
       <div className="text-sm uppercase col-span-1 mb-14">What we do</div>
         {processData.map((item: any, index: any) => (
@@ -28,7 +28,7 @@ export default function Process() {
             key={index}
             className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
           >
-            { index !==0 && <Separator className="mb-12"/> }
+            { index !==0 && <Separator className="mb-12 w-full"/> }
             <div className="flex gap-20">
               <div className="text-sm md:text-sm flex-shrink-0">
                 {item.order}
