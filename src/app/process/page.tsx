@@ -161,15 +161,13 @@ export default function ProcessPage() {
         />
       </section>
 
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mt-20 gap-y-4">
-        <div className="text-sm uppercase col-span-1">The process</div>
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-8 md:mt-20 gap-y-4">
+        <div className="text-sm uppercase col-span-1 my-10">The process</div>
         {processData.map((item: any, index: any) => (
           <div
             key={index}
-            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-20 md:mb-12"
           >
-            {/* {index !== 0 && <Separator className="mb-12" variant="primary" />} */}
-            {index !== 0 && <Separator className="mb-12 hidden md:block" variant="primary"/>}
             <div className="flex gap-20">
               <div className="text-sm md:text-sm flex-shrink-0">
                 {item.order}
@@ -182,9 +180,10 @@ export default function ProcessPage() {
                 <div className="text-sm md:text-sm">{item.description}</div>
               </div>
             </div>
+            {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
-        {/* <Separator className="col-span-1 md:col-span-12 my-10" variant="primary"/> */}
+
       </section>
       <Footer separatorVariant="primary" />
     </div>

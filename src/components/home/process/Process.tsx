@@ -10,7 +10,7 @@ export default function Process() {
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-50 gap-y-4">
         <div className="col-span-1 md:col-span-6 md:col-start-4 space-y-4 text-center">
           <div className="text-sm uppercase col-span-1">How we work</div>
-          <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12">
+          <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12 mb-20">
             We work collaboratively with our clients to create brands, websites,
             and campaigns that shape how people connect and grow. Our partners
             are forward thinkers who see design and technology as engines for
@@ -21,17 +21,17 @@ export default function Process() {
 
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-30 gap-y-4">
         {/* <Separator className="col-span-1 md:col-span-12 my-14 w-full" /> */}
-        <div className="col-span-1 md:col-span-12 my-14 w-full h-[0.25px] bg-gray-700" />
-
-        <div className="text-sm uppercase col-span-1 mb-14">What we do</div>
+        {/* <div className="col-span-1 md:col-span-12 my-14 w-full h-[0.25px] bg-gray-700" /> */}
+        <Separator className="col-span-1 md:col-span-12 mb-16"/>
+        <div className="text-sm uppercase col-span-1 mb-10">What we do</div>
         {processData.map((item: any, index: any) => (
           <div
             key={index}
-            className="col-span-1 md:col-span-5 md:col-start-7 mb-8 md:mb-12"
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-10 md:mb-12"
           >
             {/* {index !== 0 && <Separator className="mb-12 hidden md:block" />} */}
-            <Separator className="mb-12"/>
-         <Separator className="col-span-1 md:col-span-12 my-14 w-full" /> 
+            {/* {index !== processData.length - 1 && <Separator className="mb-12" />} */}
+            {/* <Separator className="mb-12"/> */}
 
             <div className="flex gap-20">
               <div className="text-sm md:text-sm flex-shrink-0">
@@ -45,6 +45,9 @@ export default function Process() {
                 <div className="text-sm md:text-sm">{item.description}</div>
               </div>
             </div>
+            {/* <Separator className="mt-10"/> */}
+            {index !== processData.length - 1 && <Separator className="mt-10" />}
+
           </div>
         ))}
         <Separator className="col-span-1 md:col-span-12 my-10" />
