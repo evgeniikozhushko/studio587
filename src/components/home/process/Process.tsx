@@ -21,7 +21,7 @@ export default function Process() {
 
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-30 gap-y-4">
         <div className="col-span-1 md:col-span-12 my-14">
-          <Separator className="w-full !h-px" />
+          <Separator className="w-full" />
         </div>
 
         <div className="text-sm uppercase col-span-1 mb-14">What we do</div>
