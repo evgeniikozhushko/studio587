@@ -31,7 +31,7 @@ export default function Process() {
           >
             {/* {index !== 0 && <Separator className="mb-12 hidden md:block" />} */}
             {index !== 0 && (
-              <div className="mb-12 hidden md:block w-full h-[0.25px] min-h-[0.25px] bg-gray-700 shrink-0 block" style={{ height: '0.25px' }} />
+              <div className="mb-12 w-full h-[0.25px] min-h-[0.25px] bg-gray-700 shrink-0 block" style={{ height: '0.25px' }} />
             )}
 
             <div className="flex gap-20">
