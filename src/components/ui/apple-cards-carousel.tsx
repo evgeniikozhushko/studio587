@@ -263,7 +263,7 @@ export const Card = ({
           {/* Card Title */}
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="underline underline-offset-12 mt-2 max-w-xs text-left font-light font-sans text-sm [text-wrap:balance] text-white md:text-sm"
+            className="underline underline-offset-6 mt-2 max-w-xs text-left font-light font-sans text-sm [text-wrap:balance] text-white md:text-sm"
           >
             {card.title}
           </motion.p>

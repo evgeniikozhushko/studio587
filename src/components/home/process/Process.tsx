@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import processData from "@/data/processData";
 
 export default function Process() {
@@ -22,7 +22,8 @@ export default function Process() {
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-30 gap-y-4">
         {/* <Separator className="col-span-1 md:col-span-12 my-14 w-full" /> */}
         {/* <div className="col-span-1 md:col-span-12 my-14 w-full h-[0.25px] bg-gray-700" /> */}
-        <Separator className="col-span-1 md:col-span-12 mb-16"/>
+        {/* <Separator className="col-span-1 md:col-span-12 mb-16"/> */}
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-20" />
         <div className="text-sm uppercase col-span-1 mb-10">What we do</div>
         {processData.map((item: any, index: any) => (
           <div
@@ -46,11 +47,16 @@ export default function Process() {
               </div>
             </div>
             {/* <Separator className="mt-10"/> */}
-            {index !== processData.length - 1 && <Separator className="mt-10" />}
-
+            {/* {index !== processData.length - 1 && <Separator className="mt-10" />} */}
+            {index !== processData.length - 1 && (
+              <div className="border-t border-gray-400 w-full mt-10" />
+            )}
           </div>
         ))}
-        <Separator className="col-span-1 md:col-span-12 my-10" />
+
+        {/* What We Do section End */}
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 my-10 md:my-20" />
+        {/* <Separator className="col-span-1 md:col-span-12 my-10" /> */}
       </section>
     </>
   );
