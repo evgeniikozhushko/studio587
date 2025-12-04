@@ -92,7 +92,7 @@ export const projects: Project[] = [
       { src: "/projects/shovelsup/services.jpg", alt: "Services grid" },
       { src: "/projects/shovelsup/cta.jpg", alt: "Primary CTA section" },
     ],
-    // add a public link if available, or omit CTA
+    cta: { label: "View site", href: "https://www.shovelsup.ca" },
   },
 
   {
@@ -111,6 +111,7 @@ export const projects: Project[] = [
       { src: "/projects/clearwater/lockup.jpg", alt: "Primary lockup" },
       { src: "/projects/clearwater/merch.jpg", alt: "Logo on apparel" },
     ],
+    cta: { label: "View site", href: "https://www.clearwaterpaddleboards.ca" },
   },
 
   // {
