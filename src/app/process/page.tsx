@@ -84,6 +84,7 @@ export default function ProcessPage() {
       </section>
 
       <div className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-20">
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-20 md:my-20" />
         {/* <div className="grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
           Timeline
         </div> */}
@@ -97,7 +98,6 @@ export default function ProcessPage() {
         {/* Buttons to switch timelines */}
         <div className="col-span-1 md:col-span-12 flex justify-between items-center">
           <div className="flex flex-col md:flex-row gap-4 w-fit">
-
             {timelines.map((timeline) => (
               <Button
                 key={timeline.id}
@@ -110,7 +110,6 @@ export default function ProcessPage() {
                 {timeline.name}
               </Button>
             ))}
-
           </div>
 
           {/* Cost number*/}
@@ -120,15 +119,16 @@ export default function ProcessPage() {
           </div>
         </div>
 
+        {/* <div className="border-t border-gray-400 col-span-1 md:col-span-12 my-10 md:my-20" /> */}
         {/* <div className="col-span-1 md:col-span-12 md:col-start-8 md:col-span-1 flex gap-4 items-center">
             <div className="text-sm uppercase">From</div>
             <div className="text-4xl">{selectedTimeline.cost}</div>
           </div> */}
 
-        <Separator
+        {/* <Separator
           className="col-span-1 md:col-span-12 mt-6 md:mt-4"
           variant="primary"
-        />
+        /> */}
       </div>
 
       {/* Timeline component */}
@@ -141,7 +141,9 @@ export default function ProcessPage() {
               }`}
             >
               {item.phase}
-              <div className="block md:hidden text-[10px] mt-1">{item.duration}</div>
+              <div className="block md:hidden text-[10px] mt-1">
+                {item.duration}
+              </div>
             </div>
             <div
               className={`text-[8px] md:text-xs bg-background/4 ${
@@ -155,14 +157,18 @@ export default function ProcessPage() {
             </div>
           </React.Fragment>
         ))}
-        <Separator
+        {/* <Separator
           className="col-span-10 md:col-span-12 my-8 md:mt-20"
           variant="primary"
-        />
+        /> */}
       </section>
 
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-8 md:mt-20 gap-y-4">
-        <div className="text-sm uppercase col-span-1 my-10 md:my-0">The process</div>
+      {/* The Process Section */}
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-8 md:mt-10 gap-y-4">
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mt-20 md:my-20" />
+        <div className="text-sm uppercase col-span-1 my-10 md:my-0">
+          The process
+        </div>
         {processData.map((item: any, index: any) => (
           <div
             key={index}
@@ -183,7 +189,6 @@ export default function ProcessPage() {
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
-
       </section>
       <Footer separatorVariant="primary" />
     </div>
