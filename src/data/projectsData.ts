@@ -132,22 +132,21 @@ export const projects: Project[] = [
   //   cta: { label: "Visit site", href: "https://www.evgenii.ca" },
   // },
 
-  {
-    slug: "beta-board",
-    category: "Product",
-    title: "BetaBoard — Climbing Route-Management",
-    summary:
-      "A platform for climbing gyms to plan, schedule, and track routes with a clear, role-aware UI.",
-    cover: {
-      src: "/projects/betaboard/cover.jpg",
-      alt: "BetaBoard dashboard mockup",
-    },
-    details: `Built with Next.js, MongoDB, and Shadcn UI. Models cover Gyms → Sections → Zones → Anchors → Routes with versioning and access controls. Includes route charts, setter workflows, and mobile-friendly views for quick updates on the wall.`,
-    tags: ["Next.js", "MongoDB", "Shadcn UI", "RBAC", "Design Systems"],
-    gallery: [
-      { src: "/projects/betaboard/dashboard.jpg", alt: "Routes dashboard" },
-      { src: "/projects/betaboard/versioning.jpg", alt: "Route version view" },
-    ],
-    // internal product — add a link when public
-  },
+  // {
+  //   slug: "beta-board",
+  //   category: "Product",
+  //   title: "BetaBoard — Climbing Route-Management",
+  //   summary:
+  //     "A platform for climbing gyms to plan, schedule, and track routes with a clear, role-aware UI.",
+  //   cover: {
+  //     src: "/projects/betaboard/cover.jpg",
+  //     alt: "BetaBoard dashboard mockup",
+  //   },
+  //   details: `Built with Next.js, MongoDB, and Shadcn UI. Models cover Gyms → Sections → Zones → Anchors → Routes with versioning and access controls. Includes route charts, setter workflows, and mobile-friendly views for quick updates on the wall.`,
+  //   tags: ["Next.js", "MongoDB", "Shadcn UI", "RBAC", "Design Systems"],
+  //   gallery: [
+  //     { src: "/projects/betaboard/dashboard.jpg", alt: "Routes dashboard" },
+  //     { src: "/projects/betaboard/versioning.jpg", alt: "Route version view" },
+  //   ],
+  // },
 ];

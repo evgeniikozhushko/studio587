@@ -44,7 +44,7 @@ export default function ProjectCardContent({ project }: { project: Project }) {
       )}
 
       {/* Gallery section */}
-      {project.gallery && project.gallery.length > 0 && (
+      {/* {project.gallery && project.gallery.length > 0 && (
         <div className="space-y-4">
           <h3 className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 uppercase">
             Project Gallery
@@ -65,7 +65,7 @@ export default function ProjectCardContent({ project }: { project: Project }) {
             ))}
           </div>
         </div>
-      )}
+      )} */}
 
       {/* Call to action */}
       {project.cta && (

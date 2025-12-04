@@ -144,7 +144,8 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                   },
                 }}
                 key={"card" + index}
-                className="rounded-sm last:pr-[5%] md:last:pr-[33%]"
+                className="rounded-sm last:pr-[2%] md:last:pr-[5%]"
+                // last:pr-[5%] md:last:pr-[33%]
               >
                 {item}
               </motion.div>
