@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { TimelineConfig, timelines } from "@/data/timelinesData";
 import { Ghost } from "lucide-react";
 
-export default function StudioPage() {
+export default function ProcessPage() {
   const [selectedTimeline, setSelectedTimeline] = useState<TimelineConfig>(
     timelines[0]
   );
@@ -83,6 +83,7 @@ export default function StudioPage() {
         </div>
       </section>
 
+      {/* Timeline section */}
       <div className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-10 md:mb-20">
         <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-20 md:my-20" />
         {/* <div className="grid w-full grid-cols-1 md:grid-cols-1 md:grid-rows-1 md:col-span-1 uppercase">
