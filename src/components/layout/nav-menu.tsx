@@ -77,7 +77,7 @@ export function NavMenu() {
           <NavigationMenuItem>
             <NavigationMenuTrigger
               className={`font-semibold uppercase ${
-                pathname === "/process" ? "bg-backgroundTertiary" : ""
+                pathname === "/studio" ? "bg-backgroundTertiary" : ""
               }`}
             >
               Studio 587
@@ -103,7 +103,7 @@ export function NavMenu() {
                 <ListItem href="/docs" title="Work">
                   We create next-level digital experiences.
                 </ListItem>
-                <ListItem href="/process" title="Process">
+                <ListItem href="/studio" title="Studio">
                   We value transparencyand collaboration onevery project.
                 </ListItem>
                 {/* <ListItem href="/contact" title="Contact">
@@ -222,7 +222,14 @@ export function NavMenu() {
                 <SheetTitle className="mb-8">Menu</SheetTitle>
                 <Link
                   className="uppercase"
-                  href="/work"
+                  href="/"
+                  onClick={() => setOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link
+                  className="uppercase"
+                  href="/studio"
                   onClick={() => setOpen(false)}
                 >
                   Work
@@ -233,13 +240,6 @@ export function NavMenu() {
                   onClick={() => setOpen(false)}
                 >
                   Studio
-                </Link>
-                <Link
-                  className="uppercase"
-                  href="/process"
-                  onClick={() => setOpen(false)}
-                >
-                  Process
                 </Link>
               </SheetHeader>
               <SheetFooter className="flex items-center">

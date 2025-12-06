@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { TimelineConfig, timelines } from "@/data/timelinesData";
 import { Ghost } from "lucide-react";
 
-export default function ProcessPage() {
+export default function StudioPage() {
   const [selectedTimeline, setSelectedTimeline] = useState<TimelineConfig>(
     timelines[0]
   );
@@ -189,6 +189,7 @@ export default function ProcessPage() {
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-20" />
       </section>
       <Footer separatorVariant="primary" />
     </div>
