@@ -35,6 +35,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-icon.png',
+  },
+  
   // Open Graph tags
   openGraph: {
     type: "website",
