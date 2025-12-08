@@ -190,7 +190,7 @@ export default function ProcessPage() {
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-16" />
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 my-10 md:my-16" />
       </section>
       <Footer separatorVariant="primary" />
     </div>
