@@ -166,7 +166,7 @@ export default function ProcessPage() {
 
       {/* The Process Section */}
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 mb-8 md:mt-10 gap-y-4">
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mt-20 md:my-20" />
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mt-20 md:my-0" />
         <div className="text-sm uppercase col-span-1 my-10 md:my-0">
           The process
         </div>
@@ -190,7 +190,7 @@ export default function ProcessPage() {
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-20" />
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-16" />
       </section>
       <Footer separatorVariant="primary" />
     </div>

@@ -34,8 +34,8 @@ export default function Contact() {
             <div className="text-md font-semibold md:text-lg">
               <a href="mailto:hello@studio587.ca">hello@studio587.ca</a>
             </div>
-            <div className="border-t border-gray-400 col-span-1 md:col-span-12 mt-20 md:my-20" />
           </div>
+          <div className="border-t border-gray-400 col-span-1 md:col-span-12 mt-20 md:mt-40" />
         </section>
       </main>
     </>
