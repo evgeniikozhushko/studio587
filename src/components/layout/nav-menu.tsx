@@ -100,12 +100,13 @@ export function NavMenu() {
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/docs" title="Work">
+                <ListItem href="/process" title="Process">
+                  We value transparency and collaboration onevery project.
+                </ListItem>
+                <ListItem href="/studio" title="Studio">
                   We create next-level digital experiences.
                 </ListItem>
-                <ListItem href="/process" title="Process">
-                  We value transparencyand collaboration onevery project.
-                </ListItem>
+               
                 {/* <ListItem href="/contact" title="Contact">
                   Because great projects deserve attention.
                 </ListItem> */}
@@ -232,14 +233,14 @@ export function NavMenu() {
                   href="/process"
                   onClick={() => setOpen(false)}
                 >
-                  Work
+                  Process
                 </Link>
                 <Link
                   className="uppercase"
-                  href="/process"
+                  href="/studio"
                   onClick={() => setOpen(false)}
                 >
-                  Process
+                  Studio
                 </Link>
               </SheetHeader>
               <SheetFooter className="flex items-center">
