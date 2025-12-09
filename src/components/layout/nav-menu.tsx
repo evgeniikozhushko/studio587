@@ -71,50 +71,55 @@ export function NavMenu() {
   return (
     <>
       {/* Desktop Navigation (≥768px) */}
-      <div className="hidden md:block sticky top-0 z-50 py-2">
-      <NavigationMenu viewport={false} className="my-2 mx-2">
-        <NavigationMenuList className="gap-4 md:gap-14">
-          <NavigationMenuItem>
-            <NavigationMenuTrigger
-              className={`font-semibold uppercase ${
-                pathname === "/process" ? "bg-backgroundTertiary" : ""
-              }`}
-            >
-              Studio 587
-            </NavigationMenuTrigger>
+      {/* <div className="hidden md:block sticky top-0 z-50 py-2"> */}
+      <div
+        className={`hidden md:block sticky top-0 z-50 py-2 ${
+          pathname === "/studio" ? "dark" : ""
+        }`}
+      >
+        <NavigationMenu viewport={false} className="my-2 mx-2">
+          <NavigationMenuList className="gap-4 md:gap-14">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger
+                className={`font-semibold uppercase ${
+                  pathname === "/process" ? "bg-backgroundTertiary" : ""
+                }`}
+              >
+                Studio 587
+              </NavigationMenuTrigger>
 
-            <NavigationMenuContent>
-              <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <a
-                      className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
-                      href="/"
-                    >
-                      <div className="mt-4 mb-2 text-md font-medium">
-                        Studio 587
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-tight">
-                        Bring it home
-                      </p>
-                    </a>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/process" title="Process">
-                  We value transparency and collaboration onevery project.
-                </ListItem>
-                <ListItem href="/studio" title="Studio">
-                  We create next-level digital experiences.
-                </ListItem>
-               
-                {/* <ListItem href="/contact" title="Contact">
+              <NavigationMenuContent>
+                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    <NavigationMenuLink asChild>
+                      <a
+                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                        href="/"
+                      >
+                        <div className="mt-4 mb-2 text-md font-medium">
+                          Studio 587
+                        </div>
+                        <p className="text-muted-foreground text-sm leading-tight">
+                          Bring it home
+                        </p>
+                      </a>
+                    </NavigationMenuLink>
+                  </li>
+                  <ListItem href="/process" title="Process">
+                    We value transparency and collaboration onevery project.
+                  </ListItem>
+                  <ListItem href="/studio" title="Studio">
+                    We create next-level digital experiences.
+                  </ListItem>
+
+                  {/* <ListItem href="/contact" title="Contact">
                   Because great projects deserve attention.
                 </ListItem> */}
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
 
-          {/* <NavigationMenuItem>
+            {/* <NavigationMenuItem>
             <NavigationMenuTrigger className="font-light uppercase">
               Components
             </NavigationMenuTrigger>
@@ -133,7 +138,7 @@ export function NavMenu() {
             </NavigationMenuContent>
           </NavigationMenuItem> */}
 
-          {/* <NavigationMenuItem>
+            {/* <NavigationMenuItem>
             <NavigationMenuLink
               asChild
               className={`${navigationMenuTriggerStyle()} font-light uppercase`}
@@ -142,7 +147,7 @@ export function NavMenu() {
             </NavigationMenuLink>
           </NavigationMenuItem> */}
 
-          {/* <NavigationMenuItem>
+            {/* <NavigationMenuItem>
             <NavigationMenuTrigger className="font-light uppercase">
               List
             </NavigationMenuTrigger>
@@ -178,7 +183,7 @@ export function NavMenu() {
             </NavigationMenuContent>
           </NavigationMenuItem> */}
 
-          {/* <NavigationMenuItem>
+            {/* <NavigationMenuItem>
             <NavigationMenuTrigger className="font-light uppercase">
               Simple
             </NavigationMenuTrigger>
@@ -198,10 +203,9 @@ export function NavMenu() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem> */}
-        </NavigationMenuList>
-      </NavigationMenu>
+          </NavigationMenuList>
+        </NavigationMenu>
       </div>
-
 
       <div className="grid grid-cols-12 px-5 pt-4 md:hidden">
         <div className="col-span-6">
