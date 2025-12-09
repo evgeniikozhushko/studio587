@@ -22,7 +22,7 @@ const studioPage = () => {
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-20 gap-y-4">
         {/* Intro */}
         <div className="col-span-1 md:col-span-12">
-          <div className="text-sm uppercase md:w-1/2 md:mb-20">
+          <div className="text-sm uppercase md:w-1/2 mb-10 md:mb-20">
             Studio 587 is based in Canmore, Alberta, Canada and operates at a
             Bow Valley, Provincial, National and Global scale. We are a digital
             technology studio that builds brand and websites.
@@ -30,7 +30,7 @@ const studioPage = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 md:mb-40">
+        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 mb-14 md:mb-30">
           <div className="text-xl md:text-3xl font-semibold col-span-1 md:col-span-6 md:col-start-3">
             We work collaboratively with our clients to create brands, websites,
             and campaigns that shape how people connect and grow. Our partners
@@ -40,11 +40,12 @@ const studioPage = () => {
         </div>
 
         {/* How we work */}
-        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:mb-20">
+        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 mb-14 md:mb-20">
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10"/>
           <div className="text-sm uppercase col-span-1 md:col-span-2">
             How we work
           </div>
-          <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3">
+          <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3 md:mb-0">
             At Studio 587, we work fast, but we're intentional with every
             decision. Curiosity and creativity drive our process, while
             practicality keeps us rooted in what actually works.
@@ -65,7 +66,7 @@ const studioPage = () => {
         </div>
 
         {/* What we want */}
-        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:mb-30">
+        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 mb-14 md:mb-30">
           <div className="text-sm uppercase col-span-1 md:col-span-2">
             What we want
           </div>
@@ -86,11 +87,12 @@ const studioPage = () => {
         </div>
 
         {/* Services */}
-        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:grid-flow-dense md:mb-30">
+        <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:grid-flow-dense mb-10 md:mb-20">
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10 md:hidden"/>
           <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-8">
             Services
           </div>
-          <div className="col-span-1 md:col-span-2 md:col-start-8">
+          <div className="col-span-1 md:col-span-2 md:col-start-8 mb-14">
             <ul className="text-md font-medium">
               <li>Frontend Development</li>
               <li>Backend Development</li>
@@ -123,18 +125,20 @@ const studioPage = () => {
 
         {/* Who we are */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:mb-30">
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10"/>
+
           <div className="text-sm uppercase col-span-1 md:col-span-2">
             Who we are
           </div>
 
-          <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-3">
+          <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-3 mb-4 md:mb-0">
             Evgenii Kozhushko
             <div className="text-xs uppercase col-span-1 md:col-span-2 md:col-start-3">
               Principal designer & developer
             </div>
           </div>
 
-          <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3">
+          <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3 mb-8 md:mb-0">
             With years of experience supporting local businesses, non-profits,
             and growing teams across Alberta, Evgenii has worked on digital and
             branding projects that span tourism, outdoor recreation, community
@@ -186,7 +190,7 @@ const studioPage = () => {
               className=""
             />
           </div>
-          <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-8 md:mt-8">
+          <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-8 md:mt-8 mb-8 md:mb-0">
             Work with us
             <div
               onClick={handleEmailClick}

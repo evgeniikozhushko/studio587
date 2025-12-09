@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <>
-      <main className="my-24 space-y-24 md:my-48 md:space-y-48">
+      <main className="my-20 space-y-24 md:my-48 md:space-y-48">
         <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
           <div className="col-span-1 md:col-span-6 space-y-4">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
@@ -45,7 +45,7 @@ export default function Hero() {
               Servicing Canmore, Banff, Bow Valley, Alberta, and clients globally.
             </div>
 
-            <Separator className="col-span-1 mt-0 mt-14 md:hidden" />
+            <Separator className="col-span-1 mt-14 md:hidden" />
           </div>
         </section>
       </main>
