@@ -70,7 +70,7 @@ export default function ProcessPage() {
             commitment to transparent timelines and clear pricing. Our open and
             honest approach keeps you informed every step of the way. We believe
             the best work comes from strong relationships, built on trust,
-            communication, and collaboration. We value transparencyand
+            communication, and collaboration. We value transparency and
             collaboration onevery project.
           </div>
         </div>

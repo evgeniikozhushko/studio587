@@ -8,13 +8,14 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 
 const studioPage = () => {
-
   const handleEmailClick = () => {
-    const email = 'hello@studio587.ca';
-    const subject = 'Studio587.ca';
+    const email = "hello@studio587.ca";
+    const subject = "Studio587.ca";
 
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}`
-  }
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(
+      subject
+    )}`;
+  };
 
   return (
     <div className="bg-foreground text-foregroundTertiary fixed inset-0 overflow-auto">
@@ -41,7 +42,7 @@ const studioPage = () => {
 
         {/* How we work */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 mb-14 md:mb-20">
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10"/>
+          <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10" />
           <div className="text-sm uppercase col-span-1 md:col-span-2">
             How we work
           </div>
@@ -88,7 +89,7 @@ const studioPage = () => {
 
         {/* Services */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:grid-flow-dense mb-10 md:mb-20">
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10 md:hidden"/>
+          <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10 md:hidden" />
           <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-8">
             Services
           </div>
@@ -125,7 +126,7 @@ const studioPage = () => {
 
         {/* Who we are */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:mb-30">
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10"/>
+          <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10" />
 
           <div className="text-sm uppercase col-span-1 md:col-span-2">
             Who we are
@@ -137,8 +138,38 @@ const studioPage = () => {
               Principal designer & developer
             </div>
           </div>
-
           <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3 mb-8 md:mb-0">
+            With years of experience supporting local businesses, non-profits,
+            and growing teams across Alberta, Evgenii Kozhushko is the founder
+            and creative lead behind Studio 587. His work spans digital design,
+            branding, and modern web development for organizations operating in
+            tourism, outdoor recreation, community services, and small business
+            sectors throughout the Bow Valley. This experience has shaped a
+            practice that values clarity, longevity, and design solutions that
+            feel grounded in place—reflecting both the culture of the region and
+            the ambitions of the businesses within it.
+            <br />
+            <br />
+            At the core of Studio 587’s approach is the integration of strong
+            visual design and modern, scalable technology. As a designer,
+            Evgenii brings a refined visual sensibility to every project, with
+            expertise across logo design, typography, color systems, layout, and
+            brand storytelling. This design-first foundation ensures that each
+            website or digital product is visually cohesive, purposeful, and
+            aligned with the client’s broader brand identity—creating
+            experiences that are not only functional, but memorable and
+            distinctive in competitive markets.
+            <br />
+            <br />
+            Known for a detail-oriented approach, modern design sensibility, and
+            thoughtful problem-solving, Evgenii guides Studio 587 with a focus
+            on building digital work that lasts. Every project is approached
+            with an understanding of Alberta’s local market—balancing aesthetic
+            quality, technical rigor, and practical business goals to deliver
+            digital solutions that support growth, credibility, and long-term
+            success.
+          </div>
+          {/* <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3 mb-8 md:mb-0">
             With years of experience supporting local businesses, non-profits,
             and growing teams across Alberta, Evgenii has worked on digital and
             branding projects that span tourism, outdoor recreation, community
@@ -166,7 +197,7 @@ const studioPage = () => {
             his detail-oriented approach, modern design sensibility, and
             commitment to delivering clean, maintainable code tailored to the
             needs of Alberta’s market.
-          </div>
+          </div> */}
         </div>
 
         {/* Me */}
