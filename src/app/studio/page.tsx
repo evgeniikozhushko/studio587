@@ -135,7 +135,7 @@ const studioPage = () => {
           <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-3 mb-4 md:mb-0">
             Evgenii Kozhushko
             <div className="text-xs uppercase col-span-1 md:col-span-2 md:col-start-3">
-              Principal designer & developer
+              Founder & Creative / Technical Lead
             </div>
           </div>
           <div className="text-md font-medium col-span-1 md:col-span-4 md:col-start-3 mb-8 md:mb-0">
