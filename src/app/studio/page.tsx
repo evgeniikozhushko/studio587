@@ -90,6 +90,15 @@ const studioPage = () => {
         {/* Services */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 gap-y-4 md:grid-flow-dense mb-10 md:mb-20">
           <div className="border-t border-gray-400 col-span-1 md:col-span-12 mb-10 md:hidden" />
+          {/* <div className="text-sm uppercase col-span-1 md:col-span-5 md:col-start-2 flex justify-center md:row-span-2">
+          <Image
+              src="/Studio587_work.png"
+              alt="Evgenii Kozhushko, Studio 587"
+              width={800}
+              height={800}
+              className="w-full h-auto"
+            />
+          </div> */}
           <div className="text-sm uppercase col-span-1 md:col-span-2 md:col-start-8">
             Services
           </div>
