@@ -48,15 +48,14 @@ export const metadata: Metadata = {
     icon: [
       { 
         url: '/favicon.ico',
-        sizes: '64x64',  // Explicitly set the size
+        sizes: '64x64',
         type: 'image/x-icon'
       },
       { 
         url: '/icon.svg', 
         type: 'image/svg+xml',
-        sizes: 'any'  // SVG can scale
+        sizes: 'any'
       },
-      // Add PNG versions
       { 
         url: '/favicon-64x64.png',
         sizes: '64x64',
