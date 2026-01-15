@@ -4,23 +4,21 @@ import { useEffect, useRef, useState } from "react";
 
 interface AnimatedCounterProps {
   target: number; // Reverted to single target number
-  duration?: number; // Duration in milliseconds
+  duration?: number | number[]; // Duration in milliseconds - single value or array per digit
+  spinCycles?: number | number[]; // Full 0-9 cycles per digit before landing
+  pauseDuration?: number; // Pause duration in ms after reaching target
   className?: string;
 }
 
 export function AnimatedCounter({
   target,
-  duration = 5000,
+  duration,
+  spinCycles = 3,
+  pauseDuration = 4000,
   className = "",
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0); // Back to single count state
+  const finalDuration = duration ?? 5000;
   const [introDone, setIntroDone] = useState(false);
-  //   const [isAnimating, setIsAnimating] = useState(false)
-  const animationRef = useRef<number | null>(null);
-  const startTimeRef = useRef<number | null>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const isActiveRef = useRef(true);
-  const directionRef = useRef<1 | -1>(1); // Count backwards
   const introTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Ease-in-out function
@@ -35,6 +33,7 @@ export function AnimatedCounter({
 
   const formattedTarget = target.toString().padStart(3, "0");
   const introChars = formattedTarget.split("");
+  const targetDigits = introChars.map((digit) => Number(digit));
   const introStaggerMs = 80;
   const introDigitMs = 300;
   const introTotalMs = (introChars.length - 1) * introStaggerMs + introDigitMs;
@@ -55,78 +54,26 @@ export function AnimatedCounter({
     };
   }, [introDone, introTotalMs]);
 
-  useEffect(() => {
-    if (!introDone) {
-      return;
+  const getSpinCyclesForIndex = (index: number) => {
+    if (Array.isArray(spinCycles)) {
+      return spinCycles[index] ?? spinCycles[spinCycles.length - 1] ?? 0;
     }
+    return spinCycles;
+  };
 
-    isActiveRef.current = true;
-    const animate = (currentTime: number) => {
-      //   if (!isAnimating) {
-      //     setIsAnimating(true)
-      //   }
+  const getDurationForIndex = (index: number) => {
+    if (Array.isArray(finalDuration)) {
+      return finalDuration[index] ?? finalDuration[finalDuration.length - 1] ?? 5000;
+    }
+    return finalDuration;
+  };
 
-      if (!startTimeRef.current) {
-        startTimeRef.current = currentTime;
-      }
-
-      const elapsed = currentTime - startTimeRef.current;
-      const progress = Math.min(elapsed / duration, 1);
-
-      // Apply easing to progress
-      const easedProgress = easeInOut(progress);
-
-      //   const currentCount = Math.floor(easedProgress * target); // Single count calculation
-      const currentCount =
-        directionRef.current === 1
-          ? Math.floor(easedProgress * target)
-          : Math.floor((1 - easedProgress) * target);
-
-      setCount(currentCount);
-
-      if (progress < 1) {
-        animationRef.current = requestAnimationFrame(animate);
-      } else {
-        // Animation complete. Pause only at the target (counting up).
-        // setIsAnimating(false)
-        if (directionRef.current === 1) {
-          timeoutRef.current = setTimeout(() => {
-            if (!isActiveRef.current) {
-              return;
-            }
-            directionRef.current *= -1;
-            setCount(directionRef.current === 1 ? 0 : target);
-            startTimeRef.current = null;
-            animationRef.current = requestAnimationFrame(animate);
-          }, 4000); // Brief pause at target before reversing
-        } else {
-          directionRef.current *= -1;
-          setCount(directionRef.current === 1 ? 0 : target);
-          startTimeRef.current = null;
-          animationRef.current = requestAnimationFrame(animate);
-        }
-      }
-    };
-
-    animationRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      isActiveRef.current = false;
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-    };
-  }, [introDone, target, duration]);
-
-  const formattedCount = count.toString().padStart(3, "0");
+  const pauseMs = pauseDuration;
 
   return (
     <div className={className}>
       {!introDone ? (
-        <div className="text-8xl tracking-wider md:text-9xl lg:text-[16ram]">
+        <div className="font-semibold text-8xl tracking-wider md:text-9xl lg:text-[16rem]">
           {introChars.map((ch, index) => (
             <div
               key={`${ch}-${index}`}
@@ -138,12 +85,20 @@ export function AnimatedCounter({
           ))}
         </div>
       ) : (
-        <div className="font-medium text-8xl tracking-wider md:text-9xl lg:text-[16rem]">
-          {formattedCount}
+        <div className="font-semibold text-8xl tracking-wider md:text-9xl lg:text-[16rem]">
+          {targetDigits.map((digit, index) => (
+            <AnimatedDigit
+              key={`digit-${index}`}
+              targetDigit={digit}
+              duration={getDurationForIndex(index)}
+              pauseMs={pauseMs}
+              spinCycles={getSpinCyclesForIndex(index)}
+            />
+          ))}
         </div>
       )}
       {/* <div
-        className="font-inter text-8xl tracking-wider transition-[filter] duration-200 md:text-9xl lg:text-[12rem]"
+        className="font-inter text-8xl tracking-wider transition-[filter] duration-200 md:text-9xl lg:text-9xl lg:text-[12rem]"
         style={{ filter: isAnimating ? "blur(2px)" : "blur(0px)" }}
       >
         {formattedCount}
@@ -165,4 +120,76 @@ export function AnimatedCounter({
       `}</style>
     </div>
   );
+}
+
+interface AnimatedDigitProps {
+  targetDigit: number;
+  duration: number;
+  pauseMs: number;
+  spinCycles: number;
+}
+
+function AnimatedDigit({
+  targetDigit,
+  duration,
+  pauseMs,
+  spinCycles,
+}: AnimatedDigitProps) {
+  const [value, setValue] = useState(0);
+  const animationRef = useRef<number | null>(null);
+  const startTimeRef = useRef<number | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isActiveRef = useRef(true);
+
+  // Ease-in-out sine: smoother acceleration/deceleration
+  // const easeInOut = (t: number): number => {
+  //   return -(Math.cos(Math.PI * t) - 1) / 2;
+  // };
+
+  const easeInOut = (t: number): number => 1 - (1 - t) * (1 - t);
+
+  useEffect(() => {
+    isActiveRef.current = true;
+
+    const animate = (currentTime: number) => {
+      if (!startTimeRef.current) {
+        startTimeRef.current = currentTime;
+      }
+
+      const elapsed = currentTime - startTimeRef.current;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeInOut(progress);
+
+      const totalSteps = spinCycles * 10 + targetDigit;
+      const step = Math.floor(easedProgress * totalSteps);
+      const nextValue = step >= totalSteps ? targetDigit : step % 10;
+      setValue(nextValue);
+
+      if (progress < 1) {
+        animationRef.current = requestAnimationFrame(animate);
+      } else {
+        timeoutRef.current = setTimeout(() => {
+          if (!isActiveRef.current) {
+            return;
+          }
+          startTimeRef.current = null;
+          animationRef.current = requestAnimationFrame(animate);
+        }, pauseMs);
+      }
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      isActiveRef.current = false;
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [duration, pauseMs, spinCycles, targetDigit]);
+
+  return <span className="inline-block w-[1ch] text-center">{value}</span>;
 }
