@@ -18,11 +18,11 @@ export default function Hero() {
   return (
     <>
       <main className="my-20 space-y-24 md:my-48 md:space-y-48">
-        <section className="min-h-screen grid w-full grid-cols-1 md:grid-cols-12 px-5">
-          <div className="col-span-1 md:col-span-6 md:col-start-6 gap-y-0">
-          {/* <AnimatedCounter target={587} duration={[2000, 3500, 4000]} spinCycles={[4, 3, 2]} pauseDuration={10000} className="text-primary" />
-          <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" /> */}
-          </div>
+        {/* <section className="min-h-screen grid w-full grid-cols-1 md:grid-cols-12 px-5"> */}
+          {/* <div className="col-span-1 md:col-span-6 md:col-start-6 gap-y-0">
+          <AnimatedCounter target={587} duration={[2000, 3500, 4000]} spinCycles={[4, 3, 2]} pauseDuration={10000} className="text-primary" />
+          <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" />
+          </div> */}
           {/* <div className="col-span-1 md:col-span-6 md:col-start-6">
           <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" />
           </div> */}
@@ -34,7 +34,7 @@ export default function Hero() {
               className="text-primary"
             />
           </div> */}
-        </section>
+        {/* </section> */}
         <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
           <div className="col-span-1 md:col-span-6 space-y-4">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
