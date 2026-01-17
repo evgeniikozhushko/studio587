@@ -17,25 +17,53 @@ export default function Hero() {
 
   return (
     <>
-      <main className="my-20 space-y-24 md:my-48 md:space-y-48">
-        {/* <section className="min-h-screen grid w-full grid-cols-1 md:grid-cols-12 px-5"> */}
-          {/* <div className="col-span-1 md:col-span-6 md:col-start-6 gap-y-0">
-          <AnimatedCounter target={587} duration={[2000, 3500, 4000]} spinCycles={[4, 3, 2]} pauseDuration={10000} className="text-primary" />
-          <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" />
-          </div> */}
-          {/* <div className="col-span-1 md:col-span-6 md:col-start-6">
-          <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" />
-          </div> */}
-          {/* <div className="col-span-1 md:col-span-6 md:col-start-8">
+      {/* <main className="my-20 space-y-24 md:my-48 md:space-y-48"> */}
+      <main className="space-y-0">
+        <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5 items-center">
+          <div className="col-span-12 md:col-span-4 md:col-start-9 flex flex-col items-center md:items-start gap-2">
+            <AnimatedCounter
+              target={587}
+              duration={[2000, 3500, 4000]}
+              spinCycles={[4, 3, 2]}
+              pauseDuration={10000}
+              className="text-primary"
+            />
             <AnimatedText
-              // text="REASONS TO WORK TOGETHER"
               text="Reasons to work together"
               duration={2000}
               className="text-primary"
             />
-          </div> */}
-        {/* </section> */}
-        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4">
+          </div>
+        </section>
+
+        {/* // Working with text under eachoner */}
+        {/* <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5 items-center">
+          <div className="col-span-12 md:col-span-4 md:col-start-5 flex flex-col items-center md:items-start gap-2">
+            <AnimatedCounter
+              target={587}
+              duration={[2000, 3500, 4000]}
+              spinCycles={[4, 3, 2]}
+              pauseDuration={10000}
+              className="text-primary"
+            />
+            <AnimatedText
+              text="Reasons to work together"
+              duration={2000}
+              className="text-primary"
+            />
+          </div>
+        </section> */}
+
+        {/* <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5">
+        <div className="col-span-1 md:col-span-4 md:col-start-8 md:row-start-2 h-32 md:h-48 lg:h-64">
+          <AnimatedCounter target={587} duration={[2000, 3500, 4000]} spinCycles={[4, 3, 2]} pauseDuration={10000} className="text-primary" />
+        </div>
+        <div className="col-span-1 md:col-span-4 md:col-start-8 md:row-start-3 h-24 md:h-32">
+          <AnimatedText text="Reasons to work together" duration={2000} className="text-primary" />
+        </div>
+        </section> */}
+
+        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4 md:mb-50">
           <div className="col-span-1 md:col-span-6 space-y-4">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
               Brand Design & Web Development for Culture, Technology, and
@@ -64,7 +92,7 @@ export default function Hero() {
               globally.
             </div>
 
-            <Separator className="col-span-1 mt-14 md:hidden" />
+            <Separator className="col-span-1 mt-14 mb-6 md:hidden" />
           </div>
         </section>
       </main>

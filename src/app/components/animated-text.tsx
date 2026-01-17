@@ -87,7 +87,7 @@ export function AnimatedText({ text, duration = 2000, className = "" }: Animated
 
   return (
     <div className={className}>
-      <div className="font-semibold text-6xl tracking-wide md:text-6xl lg:text-4xl">
+      <div className="font-semibold text-sm tracking-wide md:text-base lg:text-lg xl:text-xl uppercase">
         {displayText || "\u00A0"} {/* Non-breaking space to maintain height */}
       </div>
     </div>
