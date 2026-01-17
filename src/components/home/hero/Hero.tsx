@@ -19,7 +19,7 @@ export default function Hero() {
     <>
       {/* <main className="my-20 space-y-24 md:my-48 md:space-y-48"> */}
       <main className="space-y-0">
-        <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5 items-center">
+        {/* <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5 items-center">
           <div className="col-span-12 md:col-span-4 md:col-start-9 flex flex-col items-center md:items-start gap-2">
             <AnimatedCounter
               target={587}
@@ -34,7 +34,7 @@ export default function Hero() {
               className="text-primary"
             />
           </div>
-        </section>
+        </section> */}
 
         {/* // Working with text under eachoner */}
         {/* <section className="h-screen w-full grid grid-cols-1 md:grid-cols-12 px-5 items-center">
