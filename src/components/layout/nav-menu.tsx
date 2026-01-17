@@ -106,7 +106,7 @@ export function NavMenu() {
                   <ListItem
                     href="/process"
                     title="Process"
-                    linkClassName="bg-backgroundTertiary"
+                    linkClassName="bg-backgroundTertiary hover:bg-backgroundTertiary/80"
                     titleClassName="text-white"
                     textClassName="text-neutral-300"
                   >
@@ -115,7 +115,7 @@ export function NavMenu() {
                   <ListItem
                     href="/studio"
                     title="Studio"
-                    linkClassName="bg-foreground"
+                    linkClassName="bg-foreground hover:bg-foreground/80"
                     titleClassName="text-white"
                     textClassName="text-neutral-400"
                   >
