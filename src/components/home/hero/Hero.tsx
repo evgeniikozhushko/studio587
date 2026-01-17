@@ -63,7 +63,7 @@ export default function Hero() {
         </div>
         </section> */}
 
-        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4 md:mb-50">
+        <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 gap-y-4 md:my-60">
           <div className="col-span-1 md:col-span-6 space-y-4">
             <div className="text-sm uppercase col-span-1 md:col-span-12">
               Brand Design & Web Development for Culture, Technology, and
