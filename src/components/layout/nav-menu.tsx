@@ -73,17 +73,15 @@ export function NavMenu() {
       {/* Desktop Navigation (≥768px) */}
       {/* <div className="hidden md:block sticky top-0 z-50 py-2"> */}
       <div
-        className={`hidden md:block sticky top-0 z-50 py-2 ${
-          pathname === "/studio" ? "dark" : ""
-        }`}
+        className={`hidden md:block sticky top-0 z-50 py-2 ${pathname === "/studio" ? "dark" : ""
+          }`}
       >
         <NavigationMenu viewport={false} className="my-2 mx-2">
           <NavigationMenuList className="gap-4 md:gap-14">
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className={`font-semibold uppercase ${
-                  pathname === "/process" ? "bg-backgroundTertiary" : ""
-                }`}
+                className={`font-semibold uppercase ${pathname === "/process" ? "bg-backgroundTertiary" : ""
+                  }`}
               >
                 Studio 587
               </NavigationMenuTrigger>
@@ -105,10 +103,22 @@ export function NavMenu() {
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/process" title="Process">
+                  <ListItem
+                    href="/process"
+                    title="Process"
+                    linkClassName="bg-backgroundTertiary"
+                    titleClassName="text-white"
+                    textClassName="text-neutral-300"
+                  >
                     We value transparency and collaboration onevery project.
                   </ListItem>
-                  <ListItem href="/studio" title="Studio">
+                  <ListItem
+                    href="/studio"
+                    title="Studio"
+                    linkClassName="bg-foreground"
+                    titleClassName="text-white"
+                    textClassName="text-neutral-400"
+                  >
                     We create next-level digital experiences.
                   </ListItem>
 
@@ -264,14 +274,26 @@ function ListItem({
   title,
   children,
   href,
+  linkClassName,
+  titleClassName,
+  textClassName,
   ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
+}: React.ComponentPropsWithoutRef<"li"> & {
+  href: string;
+  linkClassName?: string;
+  titleClassName?: string;
+  textClassName?: string;
+}) {
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link href={href}>
-          <div className="text-sm leading-none font-medium">{title}</div>
-          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+        <Link href={href} className={linkClassName}>
+          <div className={`text-sm leading-none font-medium
+${titleClassName ?? ""}`}>
+            {title}
+          </div>
+          <p className={`line-clamp-2 text-sm leading-snug ${textClassName ??
+            "text-muted-foreground"}`}>
             {children}
           </p>
         </Link>
