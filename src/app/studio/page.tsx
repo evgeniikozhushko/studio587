@@ -4,6 +4,7 @@ import { NavMenu } from "@/components/layout/nav-menu";
 import Footer from "@/components/layout/footer";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import EmailCaptureCard from "@/components/ui/email-capture-card"
 
 import React from "react";
 
@@ -239,6 +240,18 @@ const studioPage = () => {
               hello@studio587.ca
             </div>
           </div>
+        </div>
+
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-10" />
+
+        {/* Email Capture Card */}
+        <div className="col-span-1 md:col-span-4 md:col-start-1 my-12">
+          <EmailCaptureCard
+            headline="Stay connected"
+            description="Studio notes, shared occasionally."
+            successMessage="Thanks for subscribing! Check your inbox to confirm."
+            privacyNote="We respect your privacy. Unsubscribe anytime."
+          />
         </div>
 
         <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:my-10" />
