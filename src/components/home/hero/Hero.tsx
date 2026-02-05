@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { AnimatedCounter } from "@/app/components/animated-counter";
 import { AnimatedText } from "@/app/components/animated-text";
+// import EmailCaptureCard from "@/components/ui/email-capture-card"
 
 export default function Hero() {
   const handleEmailClick = () => {
@@ -32,7 +33,7 @@ export default function Hero() {
               text="Reasons to work together"
               duration={2000}
               className="text-primary"
-            />
+          />
           </div>
         </section> */}
 
@@ -94,6 +95,16 @@ export default function Hero() {
 
             <Separator className="col-span-1 mt-14 mb-0 md:hidden" />
           </div>
+
+          {/* Email Capture Card */}
+          {/* <div className="col-span-1 md:col-span-6 md:col-start-4 mt-8">
+            <EmailCaptureCard
+              headline="Stay in the loop"
+              description="Get the latest updates on design, development, and digital culture."
+              successMessage="Thanks for subscribing! Check your inbox to confirm."
+              privacyNote="We respect your privacy. Unsubscribe anytime."
+            />
+          </div> */}
         </section>
       </main>
     </>
