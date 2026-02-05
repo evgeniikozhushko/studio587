@@ -73,15 +73,15 @@ export function NavMenu() {
       {/* Desktop Navigation (≥768px) */}
       {/* <div className="hidden md:block sticky top-0 z-50 py-2"> */}
       <div
-        className={`hidden md:block sticky top-0 z-50 py-2 ${pathname === "/studio" ? "dark" : ""
-          }`}
+        // className={`hidden md:block sticky top-0 z-50 py-2 ${pathname === "/studio" ? "dark" : "" }`}
+        className={'hidden md:block sticky top-0 z-50 py-2'}
       >
         <NavigationMenu viewport={false} className="my-2 mx-2">
           <NavigationMenuList className="gap-4 md:gap-14">
             <NavigationMenuItem>
               <NavigationMenuTrigger
-                className={`font-semibold uppercase ${pathname === "/process" ? "bg-backgroundTertiary" : ""
-                  }`}
+                className={`font-semibold uppercase ${pathname === "/process" ? "bg-backgroundTertiary" :
+                  ""} ${pathname === "/studio" ? "dark" : ""}`}
               >
                 Studio 587
               </NavigationMenuTrigger>
@@ -94,19 +94,19 @@ export function NavMenu() {
                         className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                         href="/"
                       >
-                        <div className="mt-4 mb-2 text-md font-medium">
-                          Studio 587
-                        </div>
-                        <p className="text-muted-foreground text-sm leading-tight">
+                        <div className="mt-4 mb-2 text-md font-medium text-foreground">
                           Bring it home
-                        </p>
+                        </div>
+                        {/* <p className="text-muted-foreground text-sm leading-tight">
+                          Bring it home
+                        </p> */}
                       </a>
                     </NavigationMenuLink>
                   </li>
                   <ListItem
                     href="/process"
                     title="Process"
-                    linkClassName="bg-backgroundTertiary hover:bg-backgroundTertiary/80"
+                    linkClassName="bg-backgroundTertiary hover:bg-backgroundTertiary/90"
                     titleClassName="text-white"
                     textClassName="text-neutral-300"
                   >
@@ -115,7 +115,8 @@ export function NavMenu() {
                   <ListItem
                     href="/studio"
                     title="Studio"
-                    linkClassName="bg-foreground hover:bg-foreground/80"
+                    // linkClassName="bg-foreground hover:bg-foreground/80"
+                    linkClassName="bg-foreground hover:bg-foreground/90"
                     titleClassName="text-white"
                     textClassName="text-neutral-400"
                   >
