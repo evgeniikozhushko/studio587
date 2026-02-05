@@ -249,7 +249,7 @@ const studioPage = () => {
           <EmailCaptureCard
             headline="Stay connected"
             description="Studio notes, shared occasionally."
-            successMessage="Thanks for subscribing! Check your inbox to confirm."
+            successMessage="Thanks for subscribing!"
             privacyNote="We respect your privacy. Unsubscribe anytime."
           />
         </div>
