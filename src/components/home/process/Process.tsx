@@ -49,7 +49,7 @@ export default function Process() {
             {/* <Separator className="mt-10"/> */}
             {/* {index !== processData.length - 1 && <Separator className="mt-10" />} */}
             {index !== processData.length - 1 && (
-              <div className="border-t border-gray-400 w-full mt-10" />
+              <div className="border-t border-gray-400 w-full mt-20" />
             )}
           </div>
         ))}
