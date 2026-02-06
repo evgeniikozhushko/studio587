@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { AnimatedCounter } from "@/app/components/animated-counter";
 import { AnimatedText } from "@/app/components/animated-text";
+import { ClassicGlowButton } from '@/components/ui/classic-glow-button'
 // import EmailCaptureCard from "@/components/ui/email-capture-card"
 
 export default function Hero() {
@@ -87,6 +88,9 @@ export default function Hero() {
             <Button className="mt-2 px-18" onClick={handleEmailClick}>
               Start a project
             </Button>
+            {/* <ClassicGlowButton className="text-sm font-medium" onClick={handleEmailClick}>
+              Get Started
+            </ClassicGlowButton> */}
 
             <div className="md:hidden uppercase text-xs md:text-sm mt-16">
               Servicing Canmore, Banff, Bow Valley, Alberta, and clients
