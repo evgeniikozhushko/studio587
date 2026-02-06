@@ -97,7 +97,7 @@ export const projects: Project[] = [
 
   {
     slug: "clearwater-paddleboards",
-    category: "Brand",
+    category: "Brand & web development",
     title: "Clearwater Paddleboards",
     summary:
       "Logo and identity for a local paddleboard brand — clean, versatile, and outdoor-ready.",

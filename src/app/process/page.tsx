@@ -65,7 +65,7 @@ export default function ProcessPage() {
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-40 gap-y-4">
         <div className="text-sm uppercase col-span-1 mb-8">How we work</div>
         <div className="col-span-1 md:col-span-6 md:col-start-3 space-y-4 mb-0">
-          <div className="text-3xl md:text-3xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-50 to-neutral-300 bg-clip-text text-transparent">
+          <div className="text-xl md:text-3xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-50 to-neutral-300 bg-clip-text text-transparent">
           At Studio 587 we build thoughtful, human-centric websites with a
             commitment to transparent timelines and clear pricing. Our open and
             honest approach keeps you informed every step of the way. We believe
