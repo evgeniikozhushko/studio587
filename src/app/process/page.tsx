@@ -62,9 +62,24 @@ export default function ProcessPage() {
   return (
     <div className="bg-backgroundTertiary text-foregroundTertiary fixed inset-0 overflow-auto">
       <NavMenu />
-      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-50 gap-y-4">
+      <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-40 gap-y-4">
         <div className="text-sm uppercase col-span-1 mb-8">How we work</div>
-        <div className="col-span-1 md:col-span-4 md:col-start-3 space-y-4 mb-8">
+        <div className="col-span-1 md:col-span-6 md:col-start-3 space-y-4 mb-0">
+          <div className="text-3xl md:text-3xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-50 to-neutral-300 bg-clip-text text-transparent">
+          At Studio 587 we build thoughtful, human-centric websites with a
+            commitment to transparent timelines and clear pricing. Our open and
+            honest approach keeps you informed every step of the way. We believe
+            the best work comes from strong relationships, built on trust,
+            communication, and collaboration. We value transparency and
+            collaboration onevery project.
+          </div>
+          {/* <div className="text-3xl md:text-3xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-50 to-neutral-300 bg-clip-text text-transparent">
+            We are bridging strategic creativity and advanced technology to
+            build brands and digital platforms that connect audiences and drive
+            growth.
+          </div> */}
+        </div>
+        {/* <div className="col-span-1 md:col-span-3 md:col-start-9 space-y-4">
           <div className="text-lg md:text-lg font-medium col-span-1 md:col-span-12">
             At Studio 587 we build thoughtful, human-centric websites with a
             commitment to transparent timelines and clear pricing. Our open and
@@ -73,14 +88,7 @@ export default function ProcessPage() {
             communication, and collaboration. We value transparency and
             collaboration onevery project.
           </div>
-        </div>
-        <div className="col-span-1 md:col-span-3 md:col-start-9 space-y-4">
-          <div className="text-3xl md:text-3xl font-semibold col-span-1 md:col-span-12">
-            We are bridging strategic creativity and advanced technology to
-            build brands and digital platforms that connect audiences and drive
-            growth.
-          </div>
-        </div>
+        </div> */}
       </section>
 
       {/* Timeline section */}
@@ -137,9 +145,8 @@ export default function ProcessPage() {
         {selectedTimeline.items.map((item, index) => (
           <React.Fragment key={index}>
             <div
-              className={`text-xs uppercase col-start-1 col-span-4 md:col-span-1 ${
-                rowStartClasses[item.rowStart]
-              }`}
+              className={`text-xs uppercase col-start-1 col-span-4 md:col-span-1 ${rowStartClasses[item.rowStart]
+                }`}
             >
               {item.phase}
               <div className="block md:hidden text-[10px] mt-1">
@@ -147,11 +154,9 @@ export default function ProcessPage() {
               </div>
             </div>
             <div
-              className={`text-[8px] md:text-xs bg-background/4 ${
-                colSpanClasses[item.colSpan]
-              } ${rowStartClasses[item.rowStart]} ${
-                colStartClasses[item.colStart]
-              } border h-[60px] md:h-[80px] rounded-sm uppercase flex items-center justify-center`}
+              className={`text-[8px] md:text-xs bg-background/4 ${colSpanClasses[item.colSpan]
+                } ${rowStartClasses[item.rowStart]} ${colStartClasses[item.colStart]
+                } border h-[60px] md:h-[80px] rounded-sm uppercase flex items-center justify-center`}
             >
               {/* {item.duration} */}
               <span className="hidden md:block">{item.duration}</span>
@@ -173,7 +178,7 @@ export default function ProcessPage() {
         {processData.map((item: any, index: any) => (
           <div
             key={index}
-            className="col-span-1 md:col-span-5 md:col-start-7 mb-20 md:mb-12"
+            className="col-span-1 md:col-span-5 md:col-start-7 mb-20 md:my-6"
           >
             <div className="flex gap-20">
               <div className="text-sm md:text-sm flex-shrink-0">
@@ -187,10 +192,12 @@ export default function ProcessPage() {
                 <div className="text-sm md:text-sm">{item.description}</div>
               </div>
             </div>
+            {/* <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:mt-20" /> */}
+            {index !== processData.length - 1 && <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:mt-20" />}
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
-        <div className="border-t border-gray-400 col-span-1 md:col-span-12 my-10 md:my-16" />
+        <div className="border-t border-gray-400 col-span-1 md:col-span-12 my-10 md:my-30" />
       </section>
       <Footer separatorVariant="primary" />
     </div>

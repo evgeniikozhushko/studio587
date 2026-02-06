@@ -22,7 +22,7 @@ export default function Contact() {
             <div className="text-sm uppercase col-span-1 md:col-span-12">
               Your growth is our growth.
             </div>
-            <div className="text-4xl md:text-5xl font-semibold col-span-1 md:col-span-12">
+            <div className="text-4xl md:text-5xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-900 to-neutral-500 bg-clip-text text-transparent pb-1">
               587 reasons to work together
             </div>
             <Button className="mt-2 px-18" onClick={handleEmailClick}>

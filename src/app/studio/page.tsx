@@ -33,7 +33,13 @@ const studioPage = () => {
 
         {/* Mission Statement */}
         <div className="col-span-1 md:col-span-12 grid md:grid-cols-12 mb-14 md:mb-30">
-          <div className="text-xl md:text-3xl font-semibold col-span-1 md:col-span-6 md:col-start-3">
+          {/* <div className="text-xl md:text-3xl font-semibold col-span-1 md:col-span-6 md:col-start-3">
+            We work collaboratively with our clients to create brands, websites,
+            and campaigns that shape how people connect and grow. Our partners
+            are forward thinkers who see design and technology as engines for
+            change—builders of futures and shapers of communities.
+          </div> */}
+          <div className="text-xl md:text-3xl font-semibold col-span-1 md:col-span-6 md:col-start-3 bg-gradient-to-r from-neutral-50 to-neutral-500 bg-clip-text text-transparent">
             We work collaboratively with our clients to create brands, websites,
             and campaigns that shape how people connect and grow. Our partners
             are forward thinkers who see design and technology as engines for

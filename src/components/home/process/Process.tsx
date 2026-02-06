@@ -10,7 +10,7 @@ export default function Process() {
       <section className="grid w-full grid-cols-1 md:grid-cols-12 px-5 my-20 md:my-50 gap-y-4">
         <div className="col-span-1 md:col-span-6 md:col-start-4 space-y-4 text-center">
           <div className="text-sm uppercase col-span-1">How we work</div>
-          <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12 mb-20">
+          <div className="text-xl md:text-2xl font-semibold col-span-1 md:col-span-12 mb-20 bg-gradient-to-br from-neutral-900 to-neutral-500 bg-clip-text text-transparent">
             We work collaboratively with our clients to create brands, websites,
             and campaigns that shape how people connect and grow. Our partners
             are forward thinkers who see design and technology as engines for
