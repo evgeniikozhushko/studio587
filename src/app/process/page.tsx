@@ -193,7 +193,7 @@ export default function ProcessPage() {
               </div>
             </div>
             {/* <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:mt-20" /> */}
-            {index !== processData.length - 1 && <div className="border-t border-gray-400 col-span-1 md:col-span-12 md:mt-20" />}
+            {index !== processData.length - 1 && <div className="border-t border-gray-400 col-span-1 mt-20 md:col-span-12 md:mt-20" />}
             {/* {index !== processData.length - 1 && <Separator className="mt-12" variant="primary" />} */}
           </div>
         ))}
