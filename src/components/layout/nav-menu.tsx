@@ -88,10 +88,10 @@ export function NavMenu() {
 
               <NavigationMenuContent>
                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
+                  <li className="row-span-3 glow-on-hover ">
                     <NavigationMenuLink asChild>
                       <a
-                        className="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                        className="from-muted to-muted flex h-full w-full flex-col justify-start rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
                         href="/"
                       >
                         <div className="mt-4 mb-2 text-md font-medium text-foreground">

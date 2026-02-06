@@ -178,7 +178,7 @@
           <div className="space-y-3">
             <Button
               type="submit"
-              className="w-full md:w-auto"
+              className="w-full md:w-auto glow-on-hover px-18"
               disabled={formState === "submitting"}
             >
               {formState === "submitting" ? (

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { AnimatedCounter } from "@/app/components/animated-counter";
 import { AnimatedText } from "@/app/components/animated-text";
-import { ClassicGlowButton } from '@/components/ui/classic-glow-button'
+// import { ClassicGlowButton } from '@/components/ui/classic-glow-button'
 // import EmailCaptureCard from "@/components/ui/email-capture-card"
 
 export default function Hero() {
@@ -85,7 +85,7 @@ export default function Hero() {
               Servicing Canmore, Banff, Bow Valley, Alberta, and clients
               globally.
             </div>
-            <Button className="mt-2 px-18" onClick={handleEmailClick}>
+            <Button className="mt-2 px-18 glow-on-hover" onClick={handleEmailClick}>
               Start a project
             </Button>
             {/* <ClassicGlowButton className="text-sm font-medium" onClick={handleEmailClick}>
