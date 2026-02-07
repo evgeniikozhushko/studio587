@@ -42,7 +42,7 @@ export default function Contact() {
               />
             </div>
             <Button className="mt-2 px-18 glow-on-hover" onClick={handleEmailClick}>
-              Start a project
+              Get started
             </Button>
           </div>
           <div className="col-span-1 md:col-span-2 md:col-start-9 md:row-start-1 flex flex-col gap-1">

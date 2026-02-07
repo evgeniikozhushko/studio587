@@ -86,7 +86,7 @@ export default function Hero() {
               globally.
             </div>
             <Button className="mt-2 px-18 glow-on-hover" onClick={handleEmailClick}>
-              Start a project
+              Get started
             </Button>
             {/* <ClassicGlowButton className="text-sm font-medium" onClick={handleEmailClick}>
               Get Started
