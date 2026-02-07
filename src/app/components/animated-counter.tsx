@@ -73,7 +73,7 @@ export function AnimatedCounter({
   return (
     <div className={className}>
       {!introDone ? (
-        <div className="font-semibold text-8xl tracking-wider md:text-8xl lg:text-9xl xl:text-[12rem]">
+        <div className="tracking-wider text-4xl md:text-6xl font-semibold">
           {introChars.map((ch, index) => (
             <div
               key={`${ch}-${index}`}
@@ -85,7 +85,7 @@ export function AnimatedCounter({
           ))}
         </div>
       ) : (
-        <div className="font-semibold text-8xl tracking-wider md:text-8xl lg:text-9xl xl:text-[12rem]">
+        <div className="tracking-wider text-4xl md:text-6xl font-semibold">
           {targetDigits.map((digit, index) => (
             <AnimatedDigit
               key={`digit-${index}`}

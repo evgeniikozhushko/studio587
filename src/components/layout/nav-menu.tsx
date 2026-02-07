@@ -69,7 +69,7 @@ export function NavMenu() {
   const pathname = usePathname();
 
   return (
-    <>
+    <>  
       {/* Desktop Navigation (≥768px) */}
       {/* <div className="hidden md:block sticky top-0 z-50 py-2"> */}
       <div
@@ -88,10 +88,10 @@ export function NavMenu() {
 
               <NavigationMenuContent>
                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3 glow-on-hover ">
+                  <li className="row-span-3">
                     <NavigationMenuLink asChild>
                       <a
-                        className="from-muted to-muted flex h-full w-full flex-col justify-start rounded-sm bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md"
+                        className="flex h-full w-full flex-col justify-start rounded-sm p-6 no-underline outline-hidden select-none focus:shadow-md bg-linear-to-b from-muted/100 to-muted/40 hover:bg-linear-to-r"
                         href="/"
                       >
                         <div className="mt-4 mb-2 text-md font-medium text-foreground">
