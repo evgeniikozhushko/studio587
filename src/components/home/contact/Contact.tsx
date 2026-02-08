@@ -27,7 +27,7 @@ export default function Contact() {
             {/* <div className="text-4xl md:text-5xl font-semibold col-span-1 md:col-span-12 bg-gradient-to-br from-neutral-900 to-neutral-500 bg-clip-text text-transparent pb-1">
               587 reasons to work together
             </div> */}
-            <div className="col-span-12 md:col-span-4 md:col-start-1 flex flex-col items-center md:items-start gap-2">
+          <div className="col-span-12 md:col-span-4 md:col-start-1 flex flex-col items-start md:items-start gap-2">
               <AnimatedCounter
                 target={587}
                 duration={[2000, 3500, 4000]}
