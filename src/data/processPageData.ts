@@ -18,14 +18,14 @@ const processData = [
       type: "Content",
       title: "Defining the content",
       description:
-        "Your vision meets our expertise. Through clean code and modern frameworks, we deliver frontend and backend solutions that are fast, reliable, and built to perform.",
+        "We provide a content outline, help populate key pages with text, images, and assets, and train your team on the CMS.",
     },
     {
       order: "04",
       type: "Testing",
       title: "Launch ready",
       description:
-        "We provide a content outline, train your team on the CMS, and help populate key pages with text, images, and assets.",
+        "A dedicated QA period to catch bugs, ensure cross-device compatibility, and optimise performance before launch.",
     },
   ];
   
