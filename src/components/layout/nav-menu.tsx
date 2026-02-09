@@ -4,6 +4,7 @@ import * as React from "react";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 // import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
 
 import {
@@ -69,7 +70,7 @@ export function NavMenu() {
   const pathname = usePathname();
 
   return (
-    <>  
+    <>
       {/* Desktop Navigation (≥768px) */}
       {/* <div className="hidden md:block sticky top-0 z-50 py-2"> */}
       <div
@@ -88,15 +89,23 @@ export function NavMenu() {
 
               <NavigationMenuContent>
                 <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3">
+                  <li className="row-span-2">
                     <NavigationMenuLink asChild>
                       <a
-                        className="flex h-full w-full flex-col justify-start rounded-sm p-6 no-underline outline-hidden select-none focus:shadow-md bg-linear-to-b from-muted/100 to-muted/40 hover:bg-linear-to-r"
+                        className="flex h-full w-full flex-col justify-center items-center rounded-sm p-6 no-underline outline-hidden select-none 
+  focus:shadow-md bg-linear-to-b from-muted/100 to-muted/40 hover:bg-linear-to-r"
                         href="/"
                       >
-                        <div className="mt-4 mb-2 text-md font-medium text-foreground">
+                        {/* <div className="mt-4 mb-2 text-md font-medium text-foreground">
                           Bring it home
-                        </div>
+                        </div> */}
+                        <Image
+                          src="/Studio587.svg"
+                          alt="Studio 587"
+                          width={100}  
+                          height={100}
+                          className=""
+                        />
                         {/* <p className="text-muted-foreground text-sm leading-tight">
                           Bring it home
                         </p> */}
@@ -110,7 +119,7 @@ export function NavMenu() {
                     titleClassName="text-white"
                     textClassName="text-neutral-300"
                   >
-                    We value transparency and collaboration onevery project.
+                    A structured, collaborative approach to every project.
                   </ListItem>
                   <ListItem
                     href="/studio"
@@ -120,7 +129,7 @@ export function NavMenu() {
                     titleClassName="text-white"
                     textClassName="text-neutral-400"
                   >
-                    We create next-level digital experiences.
+                    A design-led studio for modern websites and digital systems.
                   </ListItem>
 
                   {/* <ListItem href="/contact" title="Contact">
