@@ -13,7 +13,7 @@ export default function ProjectCardContent({ project }: { project: Project }) {
 
       {/* Summary section */}
       {project.summary && (
-        <div className="text-md dark:text-neutral-300">
+        <div className="text-lg dark:text-neutral-300">
           {project.summary}
         </div>
       )}
